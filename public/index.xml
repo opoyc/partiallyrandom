@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Partially Random</title>
+    <link>/</link>
+    <description>Recent content on Partially Random</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
+    <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
+    <copyright>(c) 2018 Copyright Partially Random</copyright>
+    <lastBuildDate>Thu, 07 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>World Cup players&#39; hype on Instagram</title>
+      <link>/2018/06/07/2018-06-07-collect-followers-on-instagram/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/06/07/2018-06-07-collect-followers-on-instagram/</guid>
+      <description>Javier is visiting me for a couple of days here in Barcelona. This silly guy is trying to measure the relation between social media representativeness and expectations of qualifying in the group phase of the World Cup. It seems that he is collecting the information going from page to page… I as a benevolent friend create a classic scraping function to make his life easier (maybe it can make your life better as well)</description>
+    </item>
+    
+    <item>
+      <title>Getting research titles from science direct</title>
+      <link>/2018/05/28/2018-05-28-getting-science-direct-articles/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/05/28/2018-05-28-getting-science-direct-articles/</guid>
+      <description>Lately, I have been reading a lot of articles within sciencedirect website. Now, after spending several hours reading and moving through pages I realize that it is time to create a snippet to get the articles right away. Hope it helps you too!
+Packages needed require(rvest) require(tidyverse) require(stringr)  Function ext_keyF &amp;lt;- function(key_word, journal){ s1 &amp;lt;- &amp;quot;https://www.sciencedirect.com/search?qs=&amp;quot; s2 &amp;lt;- &amp;quot;&amp;amp;pub=&amp;quot; s3 &amp;lt;- &amp;quot;&amp;amp;show=100&amp;amp;sortBy=relevance&amp;amp;articleTypes=FLA&amp;amp;lastSelectedFacet=articleTypes&amp;quot; key_t &amp;lt;- key_word %&amp;gt;% stringr::str_replace_all(&amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;) jour_t &amp;lt;- journal %&amp;gt;% stringr::str_replace_all(&amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;) %&amp;gt;% stringr::str_replace_all(&amp;quot;&amp;amp;&amp;quot;, &amp;quot;%26&amp;quot;) link &amp;lt;- paste0(s1, key_t, s2, jour_t, s3) pages &amp;lt;- read_html(link) %&amp;gt;% html_nodes(&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Incertidumbre y otros cuentos: Entre los Alvarados ¿cuál es mejor apuesta?</title>
+      <link>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</guid>
+      <description>Estamos a una semana de saber cuál candidato nos va a gobernar por los siguientes cuatro años, y existe en mí un revuelo de ideas sobre qué pasará, y que hace muy difícil tomar la decisión sobre si Carlos o Fabricio Alvarado (CAQ y FAM desde ahora) lo harán mejor. Este post es un intento de formalizar conceptos y ayudar al votante a que tome la decisión más coherente posible.</description>
+    </item>
+    
+    <item>
+      <title>Bayes y el cajero automático</title>
+      <link>/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/</guid>
+      <description>Hace unos años cuando cursaba el grado en economía en la Universidad Nacional me llamó mucho la atención un fenómeno recurrente en las personas que sacan dinero en los ATM y que ahora tiene mucho más sentido.
+En ese entonces había un par de cajeros automáticos del Banco Nacional cerca de la oficina de registro, desconozco si aún estarán allí. Era normal que hubiera una fila de al menos 10 personas esperando su turno.</description>
+    </item>
+    
+    <item>
+      <title>¡Necesitamos seleccionar los docentes &#34;como para ayer&#34;!</title>
+      <link>/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</guid>
+      <description>Hoy pude ojear el Sexto Informe del Estado de la Educación donde se abordó un tema que desde hace ratos me viene dando vueltas en la cabeza: la calidad de las y los profesores de secundaria. No voy a mentir, de entrada voy buscando qué está mal, porque mi percepción es que así es desde que leí el artículo Profesores con fallas en Mate salieron de U privadas publicado hace casi 3 años.</description>
+    </item>
+    
+    <item>
+      <title>Esas canciones que quiebran y reparan</title>
+      <link>/2017/07/17/2017-07-17-esas-canciones-que-quiebran-y-reparan/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/07/17/2017-07-17-esas-canciones-que-quiebran-y-reparan/</guid>
+      <description>Hoy por cosas de youtube (a todos nos ha pasado que terminamos viendo videos de Corgies, CIERTO? VERDAD?) terminé con esta interpretación por parte de Playing For Change de la canción Sittin’ on the dock of the bay de Otis Redding (palabras mayores).
+ Lo cierto es que en lo que a Soul respecta, se gana el MVP, es de esas canciones que te llegan sin filtro al pecho y es imposible no conmoverse.</description>
+    </item>
+    
+    <item>
+      <title>Example of frequentist perspective of probability</title>
+      <link>/2017/06/09/2017-06-09-example-of-frequentist-perspective-of-probability/</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/06/09/2017-06-09-example-of-frequentist-perspective-of-probability/</guid>
+      <description>This function tries to visualize the frequentist perspective of probability by flipping an equilibrated π(θ)=0.5 coin.
+Frequentist approach establish that the true probability of an event θ is given by:
+\[ \pi(\theta_i)=\lim_{\theta_i\to\infty} \frac{n_{\theta\_i}}{n_{trials,i}} \]
+# obs is the number of times a coin is flipped # coins are the number of indepedent coins tossed at the same time f.coin=function(flips, coins){ plot(x = 0 , ylab = &amp;quot;Probability&amp;quot; , xlab = &amp;quot;Times&amp;quot; , main = paste(&amp;quot;Flipping&amp;quot;, coins, &amp;quot;indepedent coins&amp;quot;, flips, &amp;quot;times&amp;quot;) , type = &amp;quot;n&amp;quot;, ylim = c(0, 1), xlim = c(0, flips)) abline(h = .</description>
+    </item>
+    
+    <item>
+      <title>El poder de comunicar</title>
+      <link>/2017/05/19/2017-05-19-el-poder-de-comunicar/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/05/19/2017-05-19-el-poder-de-comunicar/</guid>
+      <description>Hoy al recibir el último examen me ha dado cierta nostalgia, esa que emana de cosas que a todas luces parecen simples, pero que dejan huella.
+Es difícil conectarse con algún tema que no nos hemos enfrentado directamente. Por ejemplo, hace poco leí los argumentos de un biólogo en Facebook del por que la expansión piñera en Costa Rica era un gran error. El señor explicaba que en zona la había una serie de orquídeas que eran autóctonas y aparentemente únicas que peligran debido a todos los agroquímicos necesarios para la producción de piña.</description>
+    </item>
+    
+    <item>
+      <title>Save with time stamp</title>
+      <link>/2017/04/26/2017-04-26-save-with-time-stamp/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/04/26/2017-04-26-save-with-time-stamp/</guid>
+      <description>Oftenly I have to deal with modifications of a scraping code, whose outcomes change or are subject to errors. Hence, I found useful to have a way to create versions of a data frame, this is a made savts.
+This simple yet useful function creates csv file with time stamp. It saves a data frame in the working directory as a csv file, separated by semicolon with a date and system time (format %d%m%y_%H%M).</description>
+    </item>
+    
+    <item>
+      <title>Todo sea por organizarme</title>
+      <link>/2017/04/26/2017-08-23-todo-sea-por-organizarme/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/04/26/2017-08-23-todo-sea-por-organizarme/</guid>
+      <description>Creo que el tema de querer hacer todo al mismo tiempo (no necesariamente en un orden lógico) comenzó en el colegio, esa época donde ya sentía la libertad de decidir cómo distribuir plenamente mi tiempo entre estudio y ocio. Debido en gran parte porque no tenía que contestar preguntas provenientes de mis padres sobre sí había hecho la tarea o no. Podría parecer tardío, pero en realidad no encuentro mejor punto de inflexión.</description>
+    </item>
+    
+  </channel>
+</rss>

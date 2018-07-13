@@ -1,0 +1,22 @@
+---
+title: test 2
+author: Obryan Poyser
+date: '2018-07-13'
+slug: test-2
+categories:
+  - Opinión
+tags:
+  - Educación
+  - probability
+type: post
+description: description
+keywords:
+  - key
+  - words
+topics:
+  - topic 1
+---
+
+# Headline
+
+Text

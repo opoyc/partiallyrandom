@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Partially Random</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Partially Random</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
+    <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
+    <copyright>(c) 2018 Copyright Partially Random</copyright>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Economics</title>
+      <link>/categories/economics/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eleccionescr2018</title>
+      <link>/categories/eleccionescr2018/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/eleccionescr2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opinión</title>
+      <link>/categories/opini%C3%B3n/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/opini%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>/categories/personal/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/categories/r/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Snippet</title>
+      <link>/categories/snippet/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/snippet/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

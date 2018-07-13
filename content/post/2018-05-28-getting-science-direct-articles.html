@@ -1,0 +1,116 @@
+---
+title: Getting research titles from science direct
+author: Obryan Poyser
+date: '2018-05-28'
+slug: getting-science-direct-articles
+categories:
+  - R
+tags:
+  - Web scraping
+description: 'Lately, I have been reading a lot of articles within sciencedirect website. Now, after spending several hours reading and moving through pages I realize that it is time to create a snippet to get the articles right away. Hope it helps you too!'
+thumbnail: 'img/sd.png'
+---
+
+
+
+<p>Lately, I have been reading a lot of articles within sciencedirect website. Now, after spending several hours reading and moving through pages I realize that it is time to create a snippet to get the articles right away. Hope it helps you too!</p>
+<div id="packages-needed" class="section level3">
+<h3>Packages needed</h3>
+<pre class="r"><code>require(rvest)
+require(tidyverse)
+require(stringr)</code></pre>
+</div>
+<div id="function" class="section level3">
+<h3>Function</h3>
+<pre class="r"><code>ext_keyF &lt;- function(key_word, journal){
+  s1 &lt;- &quot;https://www.sciencedirect.com/search?qs=&quot;
+  s2 &lt;- &quot;&amp;pub=&quot;
+  s3 &lt;- &quot;&amp;show=100&amp;sortBy=relevance&amp;articleTypes=FLA&amp;lastSelectedFacet=articleTypes&quot;
+  key_t &lt;- key_word %&gt;%
+    stringr::str_replace_all(&quot; &quot;, &quot;%20&quot;)
+  jour_t &lt;- journal %&gt;%
+    stringr::str_replace_all(&quot; &quot;, &quot;%20&quot;) %&gt;%
+    stringr::str_replace_all(&quot;&amp;&quot;, &quot;%26&quot;)
+  link &lt;- paste0(s1, key_t, s2, jour_t, s3)
+  pages &lt;- read_html(link) %&gt;%
+    html_nodes(&quot;.Pagination.hor-separated-list&quot;) %&gt;%
+    html_text() %&gt;%
+    stringr::str_extract(&quot;[0-9]+n&quot;) %&gt;%
+    stringr::str_replace(&quot;n&quot;,&quot;&quot;) %&gt;%
+    as.numeric()
+  link0 &lt;- link %&gt;%
+    stringr::str_replace(&quot;offset=100&quot;, &quot;offset=&quot;)
+  purrr::map(paste0(link0, seq(0, (pages-1)*100, by=100))
+             , function (x) {
+               x_h &lt;- read_html(x)
+               authors &lt;- x_h %&gt;%
+                  html_nodes(&quot;.Authors.hor.undefined&quot;) %&gt;%
+                  html_text() %&gt;%
+                  stringr::str_remove(&quot;, $&quot;)
+               title &lt;- x_h %&gt;%
+                 html_nodes(&quot;.result-list-title-link&quot;) %&gt;%
+                 html_text()
+               year &lt;- x_h %&gt;%
+                 html_nodes(&quot;.SubType.hor&quot;) %&gt;%
+                 html_text() %&gt;%
+                 stringr::str_extract(&quot;[0-9]{4}&quot;)
+               data.frame(authors, title, year, stringsAsFactors = F)
+             }
+             ) %&gt;%
+    bind_rows()
+}</code></pre>
+</div>
+<div id="example" class="section level3">
+<h3>Example</h3>
+<pre class="r"><code>j1 &lt;- &quot;Journal of Economic Behavior &amp; Organization&quot; # As seen in the website
+k1 &lt;- &quot;bounded rationality&quot; # low case, separated by space
+
+articles &lt;- ext_keyF(key_word = k1, journal = j1)
+
+# Table
+articles %&gt;%
+   head() %&gt;%
+   knitr::kable(caption = &quot;Example of the outcome for a given journal and key words&quot;)</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 1: </span>Example of the outcome for a given journal and key words</caption>
+<thead>
+<tr class="header">
+<th align="left">authors</th>
+<th align="left">title</th>
+<th align="left">year</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Hyeon Park, James Feigenbaum</td>
+<td align="left">Bounded rationality, lifecycle consumption, and Social Security</td>
+<td align="left">2018</td>
+</tr>
+<tr class="even">
+<td align="left">Russell Golman</td>
+<td align="left">Homogeneity bias in models of discrete choice with bounded rationality</td>
+<td align="left">2012</td>
+</tr>
+<tr class="odd">
+<td align="left">Richard R. Nelson</td>
+<td align="left">Bounded rationality, cognitive maps, and trial and error learning</td>
+<td align="left">2008</td>
+</tr>
+<tr class="even">
+<td align="left">C. Nicholas McKinney, John B. Van Huyck</td>
+<td align="left">Estimating bounded rationality and pricing performance uncertainty</td>
+<td align="left">2007</td>
+</tr>
+<tr class="odd">
+<td align="left">Wooyoung Lim, Alexander Matros, Theodore L. Turocy</td>
+<td align="left">Bounded rationality and group size in Tullock contests: Experimental evidence</td>
+<td align="left">2014</td>
+</tr>
+<tr class="even">
+<td align="left">Bruce E. Kaufman</td>
+<td align="left">Emotional arousal as a source of bounded rationality</td>
+<td align="left">1999</td>
+</tr>
+</tbody>
+</table>
+</div>

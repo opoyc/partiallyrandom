@@ -1,0 +1,14 @@
+---
+title: Why bounded rationality?
+author: Obryan Poyser
+date: '2018-05-19'
+slug: why-bounded-rationality
+categories:
+  - Economics
+tags:
+  - Decision-making
+description: ''
+thumbnail: ''
+---
+
+I feel impressed how many years were necessary to find the 

@@ -1,0 +1,25 @@
+---
+title: posts test
+author: Obryan Poyser
+date: '2018-07-13'
+fecha: 
+    - 2018
+slug: posts-test
+categories:
+  - Economics
+  - Personal
+tags:
+  - plot
+  - probability
+type: post
+description: description
+keywords:
+  - key
+  - words
+topics:
+  - topic 1
+---
+
+# Headline
+
+Text

@@ -1,0 +1,20 @@
+---
+title: Save with time stamp
+author: Obryan Poser
+date: '2017-04-26'
+slug: save-with-time-stamp
+categories:
+  - R
+  - snippet
+tags:
+  - R
+---
+
+
+
+<p>Oftenly I have to deal with modifications of a scraping code, whose outcomes change or are subject to errors. Hence, I found useful to have a way to create versions of a data frame, this is a made <code>savts</code>.</p>
+<p>This simple yet useful function creates csv file with time stamp. It saves a data frame in the working directory as a csv file, separated by semicolon with a date and system time (format <code>%d%m%y_%H%M</code>).</p>
+<pre><code>savts = function(x) {
+  write.csv2(x, paste(getwd(), &quot;/&quot;, deparse(substitute(x)), &quot;-&quot;, format(Sys.time(),
+    &quot;%d%m%y_%H%M&quot;), &quot;.csv&quot;, sep = &quot;&quot;), row.names = FALSE)
+}</code></pre>
