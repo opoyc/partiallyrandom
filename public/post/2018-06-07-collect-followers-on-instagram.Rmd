@@ -60,7 +60,7 @@ purrr::map(c("cristiano", "leomessi", "neymarjr"), getIG) %>%
 ## Graph
 
 ```{r, echo=F, warning=F, message=FALSE}
-dbIG <- readr::read_csv2("/home/poyser/Desktop/blogtests/002/db/IG.csv")
+dbIG <- readr::read_csv2("/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/Projects/Web/partiallyrandom/db/IG.csv")
 
 g1 <- dbIG %>%
    ggplot(aes(followers_20180620, following_20180620, label=username))+
