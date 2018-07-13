@@ -162,11 +162,11 @@ identifier = "tags"
 weight = 2
 url = "/tags/"
 
-[[Languages.en.menu.main]]
-name = "Date"
-identifier = "date"
-weight = 3
-url = "/date/"
+#[[Languages.en.menu.main]]
+#name = "Date"
+#identifier = "date"
+#weight = 3
+#url = "/date/"
 
 
 #[[Languages.en.menu.main]]
