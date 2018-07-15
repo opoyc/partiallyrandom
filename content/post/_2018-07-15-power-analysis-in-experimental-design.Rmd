@@ -34,8 +34,12 @@ Finding the optimal sample size is definitely one of the main concerns a researc
 
 So, let's start by talking about significance level, by bringing back what we learned in statistics 101 about hypothesis testing:
 
-+ Type I: Probability of rejecting the null hypothesis when it is true (false positive)  
-$$P()$$
-+ Type II: Probability of not rejecting (accepting duh) the null hypothesis when it is false (false negative)
-
++ Type I: Probability of rejecting the null hypothesis given that it is true (false positive)  
+$$P(R|H_0=true)$$
++ Type II: Probability of not rejecting (accepting duh) the null hypothesis given that it is false (false negative)
+$$P(A|H_0=false)$$
 and Type II error described by: 
+
+
+
+### References
