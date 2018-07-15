@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Scraping on Partially Random</title>
-    <link>https://partiallyrandom.netlify.com/tags/web-scraping/</link>
+    <link>/tags/web-scraping/</link>
     <description>Recent content in Web Scraping on Partially Random</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2018 Copyright Partially Random</copyright>
     <lastBuildDate>Mon, 28 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://partiallyrandom.netlify.com/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Getting research titles from science direct</title>
-      <link>https://partiallyrandom.netlify.com/2018/05/28/2018-05-28-getting-science-direct-articles/</link>
+      <link>/2018/05/28/2018-05-28-getting-science-direct-articles/</link>
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/2018/05/28/2018-05-28-getting-science-direct-articles/</guid>
+      <guid>/2018/05/28/2018-05-28-getting-science-direct-articles/</guid>
       <description>Lately, I have been reading a lot of articles within sciencedirect website. Now, after spending several hours reading and moving through pages I realize that it is time to create a snippet to get the articles right away. Hope it helps you too!
 Packages needed require(rvest) require(tidyverse) require(stringr)  Function ext_keyF &amp;lt;- function(key_word, journal){ s1 &amp;lt;- &amp;quot;https://www.sciencedirect.com/search?qs=&amp;quot; s2 &amp;lt;- &amp;quot;&amp;amp;pub=&amp;quot; s3 &amp;lt;- &amp;quot;&amp;amp;show=100&amp;amp;sortBy=relevance&amp;amp;articleTypes=FLA&amp;amp;lastSelectedFacet=articleTypes&amp;quot; key_t &amp;lt;- key_word %&amp;gt;% stringr::str_replace_all(&amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;) jour_t &amp;lt;- journal %&amp;gt;% stringr::str_replace_all(&amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;) %&amp;gt;% stringr::str_replace_all(&amp;quot;&amp;amp;&amp;quot;, &amp;quot;%26&amp;quot;) link &amp;lt;- paste0(s1, key_t, s2, jour_t, s3) pages &amp;lt;- read_html(link) %&amp;gt;% html_nodes(&amp;quot;.</description>
     </item>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Decision Making on Partially Random</title>
-    <link>https://partiallyrandom.netlify.com/tags/decision-making/</link>
+    <link>/tags/decision-making/</link>
     <description>Recent content in Decision Making on Partially Random</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,24 +11,24 @@
     <copyright>(c) 2018 Copyright Partially Random</copyright>
     <lastBuildDate>Sun, 25 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://partiallyrandom.netlify.com/tags/decision-making/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/decision-making/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Incertidumbre y otros cuentos: Entre los Alvarados ¿cuál es mejor apuesta?</title>
-      <link>https://partiallyrandom.netlify.com/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</link>
+      <link>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</guid>
+      <guid>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</guid>
       <description>Estamos a una semana de saber cuál candidato nos va a gobernar por los siguientes cuatro años, y existe en mí un revuelo de ideas sobre qué pasará, y que hace muy difícil tomar la decisión sobre si Carlos o Fabricio Alvarado (CAQ y FAM desde ahora) lo harán mejor. Este post es un intento de formalizar conceptos y ayudar al votante a que tome la decisión más coherente posible.</description>
     </item>
     
     <item>
       <title>Bayes y el cajero automático</title>
-      <link>https://partiallyrandom.netlify.com/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/</link>
+      <link>/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/</guid>
+      <guid>/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/</guid>
       <description>Hace unos años cuando cursaba el grado en economía en la Universidad Nacional me llamó mucho la atención un fenómeno recurrente en las personas que sacan dinero en los ATM y que ahora tiene mucho más sentido.
 En ese entonces había un par de cajeros automáticos del Banco Nacional cerca de la oficina de registro, desconozco si aún estarán allí. Era normal que hubiera una fila de al menos 10 personas esperando su turno.</description>
     </item>

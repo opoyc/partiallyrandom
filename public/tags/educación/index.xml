@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Educación on Partially Random</title>
-    <link>https://partiallyrandom.netlify.com/tags/educaci%C3%B3n/</link>
+    <link>/tags/educaci%C3%B3n/</link>
     <description>Recent content in Educación on Partially Random</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,15 +11,15 @@
     <copyright>(c) 2018 Copyright Partially Random</copyright>
     <lastBuildDate>Wed, 23 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://partiallyrandom.netlify.com/tags/educaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/educaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>¡Necesitamos seleccionar los docentes &#34;como para ayer&#34;!</title>
-      <link>https://partiallyrandom.netlify.com/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</link>
+      <link>/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</guid>
+      <guid>/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</guid>
       <description>Hoy pude ojear el Sexto Informe del Estado de la Educación donde se abordó un tema que desde hace ratos me viene dando vueltas en la cabeza: la calidad de las y los profesores de secundaria. No voy a mentir, de entrada voy buscando qué está mal, porque mi percepción es que así es desde que leí el artículo Profesores con fallas en Mate salieron de U privadas publicado hace casi 3 años.</description>
     </item>
     

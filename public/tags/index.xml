@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Partially Random</title>
-    <link>https://partiallyrandom.netlify.com/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Partially Random</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,78 +11,87 @@
     <copyright>(c) 2018 Copyright Partially Random</copyright>
     <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://partiallyrandom.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bayesian</title>
-      <link>https://partiallyrandom.netlify.com/tags/bayesian/</link>
+      <link>/tags/bayesian/</link>
       <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/bayesian/</guid>
+      <guid>/tags/bayesian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Decision Making</title>
-      <link>https://partiallyrandom.netlify.com/tags/decision-making/</link>
+      <link>/tags/decision-making/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/decision-making/</guid>
+      <guid>/tags/decision-making/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Educación</title>
-      <link>https://partiallyrandom.netlify.com/tags/educaci%C3%B3n/</link>
+      <link>/tags/educaci%C3%B3n/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/educaci%C3%B3n/</guid>
+      <guid>/tags/educaci%C3%B3n/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Music</title>
-      <link>https://partiallyrandom.netlify.com/tags/music/</link>
+      <link>/tags/music/</link>
       <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/music/</guid>
+      <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Power Analysis</title>
+      <link>/tags/power-analysis/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/power-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Probability</title>
-      <link>https://partiallyrandom.netlify.com/tags/probability/</link>
+      <link>/tags/probability/</link>
       <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/probability/</guid>
+      <guid>/tags/probability/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://partiallyrandom.netlify.com/tags/r/</link>
-      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <link>/tags/r/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/r/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistics</title>
-      <link>https://partiallyrandom.netlify.com/tags/statistics/</link>
+      <link>/tags/statistics/</link>
       <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/statistics/</guid>
+      <guid>/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web Scraping</title>
-      <link>https://partiallyrandom.netlify.com/tags/web-scraping/</link>
+      <link>/tags/web-scraping/</link>
       <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>https://partiallyrandom.netlify.com/tags/web-scraping/</guid>
+      <guid>/tags/web-scraping/</guid>
       <description></description>
     </item>
     
