@@ -163,14 +163,28 @@ weight = 2
 identifier = "post"
 url = "https://opoyc.github.io/"
 
-
+[[Languages.en.menu.main]]
+name = "Social/Contact"
+weight = 3
+identifier = "contact"
+url = ""
 
 [[Languages.en.menu.main]]
-name = ""
+parent = "contact"
+name = "Github"
 pre = "<i class='fa fa-github'></i>"
 identifier = "github"
 weight = 3
 url = "https://github.com/opoyc"
+
+[[Languages.en.menu.main]]
+parent = "contact"
+name = "Email"
+pre = "<i class='fa fa-github'></i>"
+identifier = "email"
+weight = 2
+url = "mailto:opoyserc@gmail.com"
+
 
 [[Languages.en.menu.main]]
 name = "Tags"
