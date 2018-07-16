@@ -8,6 +8,8 @@ categories:
 tags:
   - Power Analysis
   - R
+  - Experiments
+  - Causal inference
 type: post
 description: ""
 keywords:
@@ -16,6 +18,7 @@ keywords:
 topics:
   - topic 1
 bibliography: allrefs.bib
+year: '2018'
 ---
 
 A couple of weeks ago we had hour yearly Ph.D. workshop in which we present our project development. I've always moral sentiments around my duties regarding what someone as me who received a grant should do. One of these moral burden is to assist to every single presentation and try to provide useful feedback.

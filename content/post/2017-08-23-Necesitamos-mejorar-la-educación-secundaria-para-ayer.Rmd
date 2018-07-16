@@ -2,8 +2,10 @@
 title: '¡Necesitamos seleccionar los docentes "como para ayer"!'
 author: "Obryan Poyser"
 date: 2017-08-23
-categories: ["Opinión"]
-tags: ["Educación"]
+categories:
+    - Opinion
+tags:
+    - Education
 bibliography: ddp.bib
 thumbnail: "/img/g1.png"
 ---

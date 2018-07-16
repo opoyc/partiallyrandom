@@ -9,7 +9,7 @@
     <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
     <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
     <copyright>(c) 2018 Copyright Partially Random</copyright>
-    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,9 +17,18 @@
     <item>
       <title>Bayesian</title>
       <link>/tags/bayesian/</link>
-      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/bayesian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comunicación</title>
+      <link>/tags/comunicaci%C3%B3n/</link>
+      <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/comunicaci%C3%B3n/</guid>
       <description></description>
     </item>
     
@@ -33,11 +42,29 @@
     </item>
     
     <item>
-      <title>Educación</title>
-      <link>/tags/educaci%C3%B3n/</link>
+      <title>Education</title>
+      <link>/tags/education/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/tags/educaci%C3%B3n/</guid>
+      <guid>/tags/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flip Coin</title>
+      <link>/tags/flip-coin/</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/flip-coin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Journal Articles</title>
+      <link>/tags/journal-articles/</link>
+      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/journal-articles/</guid>
       <description></description>
     </item>
     
@@ -69,11 +96,11 @@
     </item>
     
     <item>
-      <title>Statistics</title>
-      <link>/tags/statistics/</link>
-      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      <title>Time Stamp</title>
+      <link>/tags/time-stamp/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/tags/statistics/</guid>
+      <guid>/tags/time-stamp/</guid>
       <description></description>
     </item>
     

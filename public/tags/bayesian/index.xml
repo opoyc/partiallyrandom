@@ -9,10 +9,19 @@
     <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
     <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
     <copyright>(c) 2018 Copyright Partially Random</copyright>
-    <lastBuildDate>Fri, 23 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/bayesian/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Incertidumbre y otros cuentos: Entre los Alvarados ¿cuál es mejor apuesta?</title>
+      <link>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</guid>
+      <description>Estamos a una semana de saber cuál candidato nos va a gobernar por los siguientes cuatro años, y existe en mí un revuelo de ideas sobre qué pasará, y que hace muy difícil tomar la decisión sobre si Carlos o Fabricio Alvarado (CAQ y FAM desde ahora) lo harán mejor. Este post es un intento de formalizar conceptos y ayudar al votante a que tome la decisión más coherente posible.</description>
+    </item>
     
     <item>
       <title>Bayes y el cajero automático</title>

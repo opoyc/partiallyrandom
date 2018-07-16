@@ -14,47 +14,20 @@
     
     
     <item>
-      <title>Economics</title>
-      <link>/categories/economics/</link>
-      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
-      <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/categories/economics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Eleccionescr2018</title>
-      <link>/categories/eleccionescr2018/</link>
+      <title>Opinion</title>
+      <link>/categories/opinion/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/categories/eleccionescr2018/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Opinión</title>
-      <link>/categories/opini%C3%B3n/</link>
-      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
-      <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/categories/opini%C3%B3n/</guid>
+      <guid>/categories/opinion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Personal</title>
       <link>/categories/personal/</link>
-      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/categories/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/categories/r/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
-      <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/categories/r/</guid>
       <description></description>
     </item>
     
@@ -64,6 +37,15 @@
       <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/categories/snippet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/categories/statistics/</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/categories/statistics/</guid>
       <description></description>
     </item>
     

@@ -4,10 +4,11 @@ author: Obryan Poser
 date: '2017-04-26'
 slug: save-with-time-stamp
 categories:
-  - R
-  - snippet
+  - Snippet
 tags:
   - R
+  - Time stamp
+# year: '2017'
 ---
 
 Oftenly I have to deal with modifications of a scraping code, whose outcomes change or are subject to errors. Hence, I found useful to have a way to create versions of a data frame, this is a made `savts`.

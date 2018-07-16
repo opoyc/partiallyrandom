@@ -4,9 +4,10 @@ author: Obryan Poyser
 date: '2018-03-25'
 slug: incertidumbre-y-otros-cuentos-entre-los-alvarados-cuál-es-mejor-apuesta
 categories:
-  - EleccionesCR2018
+  - Opinion
 tags:
   - Decision-making
+  - Bayesian
 description: ''
 thumbnail: 'img/apuesta1.jpg'
 ---

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opinion on Partially Random</title>
+    <link>/categories/opinion/</link>
+    <description>Recent content in Opinion on Partially Random</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
+    <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
+    <copyright>(c) 2018 Copyright Partially Random</copyright>
+    <lastBuildDate>Sun, 25 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/opinion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Incertidumbre y otros cuentos: Entre los Alvarados ¿cuál es mejor apuesta?</title>
+      <link>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/</guid>
+      <description>Estamos a una semana de saber cuál candidato nos va a gobernar por los siguientes cuatro años, y existe en mí un revuelo de ideas sobre qué pasará, y que hace muy difícil tomar la decisión sobre si Carlos o Fabricio Alvarado (CAQ y FAM desde ahora) lo harán mejor. Este post es un intento de formalizar conceptos y ayudar al votante a que tome la decisión más coherente posible.</description>
+    </item>
+    
+    <item>
+      <title>¡Necesitamos seleccionar los docentes &#34;como para ayer&#34;!</title>
+      <link>/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</link>
+      <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/</guid>
+      <description>Hoy pude ojear el Sexto Informe del Estado de la Educación donde se abordó un tema que desde hace ratos me viene dando vueltas en la cabeza: la calidad de las y los profesores de secundaria. No voy a mentir, de entrada voy buscando qué está mal, porque mi percepción es que así es desde que leí el artículo Profesores con fallas en Mate salieron de U privadas publicado hace casi 3 años.</description>
+    </item>
+    
+  </channel>
+</rss>

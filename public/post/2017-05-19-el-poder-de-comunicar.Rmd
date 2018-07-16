@@ -5,7 +5,8 @@ date: '2017-05-19'
 slug: el-poder-de-comunicar
 categories:
   - Personal
-tags: []
+tags:
+  - Comunicación
 ---
 
 Hoy al recibir el último examen me ha dado cierta nostalgia, esa que emana de cosas que a todas luces parecen simples, pero que dejan huella.

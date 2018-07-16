@@ -54,7 +54,18 @@
   
   <url>
     <loc>/tags/bayesian/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/comunicaci%C3%B3n/</loc>
+    <lastmod>2017-05-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -65,14 +76,32 @@
   </url>
   
   <url>
-    <loc>/tags/educaci%C3%B3n/</loc>
+    <loc>/tags/education/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/flip-coin/</loc>
+    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/journal-articles/</loc>
+    <lastmod>2018-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/music/</loc>
     <lastmod>2017-07-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/opinion/</loc>
+    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -90,6 +119,12 @@
                 hreflang="en"
                 href="/"
                 />
+  </url>
+  
+  <url>
+    <loc>/categories/personal/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -111,14 +146,26 @@
   </url>
   
   <url>
-    <loc>/tags/statistics/</loc>
+    <loc>/categories/snippet/</loc>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/statistics/</loc>
     <lastmod>2017-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/time-stamp/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
