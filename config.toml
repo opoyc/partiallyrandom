@@ -151,17 +151,25 @@ copyright = "(c) 2018 Copyright Partially Random"
 title = "Partially Random" # Site title
 
 [[Languages.en.menu.main]]
+name = "About me"
+identifier = "about"
+weight = 1
+url = "/about/"
+
+[[Languages.en.menu.main]]
 name = "Website"
 pre = "<i class='fa fa-globe'></i>"
-weight = 1
+weight = 2
 identifier = "post"
 url = "https://opoyc.github.io/"
+
+
 
 [[Languages.en.menu.main]]
 name = ""
 pre = "<i class='fa fa-github'></i>"
 identifier = "github"
-weight = 2
+weight = 3
 url = "https://github.com/opoyc"
 
 [[Languages.en.menu.main]]
@@ -170,24 +178,24 @@ identifier = "tags"
 weight = 3
 url = "/tags/"
 
-[[Languages.en.menu.main]]
-name = "Search by date"
-identifier = "year"
-weight = 4
+#[[Languages.en.menu.main]]
+#name = "Search by date"
+#identifier = "year"
+#weight = 4
 
-[[Languages.en.menu.main]]
-name = "2018"
-parent = "year"
-identifier = "2018"
-weight = 1
-url = "/2018/"
+#[[Languages.en.menu.main]]
+#name = "2018"
+#parent = "year"
+#identifier = "2018"
+#weight = 1
+#url = "/2018/"
 
-[[Languages.en.menu.main]]
-name = "2017"
-parent = "year"
-identifier = "2017"
-weight = 2
-url = "/2017/"
+#[[Languages.en.menu.main]]
+#name = "2017"
+#parent = "year"
+#identifier = "2017"
+#weight = 2
+#url = "/2017/"
 
 #[[Languages.en.menu.main]]
 #name = "Date"

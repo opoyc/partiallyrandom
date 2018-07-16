@@ -18,7 +18,6 @@ keywords:
 topics:
   - topic 1
 bibliography: allrefs.bib
-year: '2018'
 ---
 
 A couple of weeks ago we had hour yearly Ph.D. workshop in which we present our project development. I've always moral sentiments around my duties regarding what someone as me who received a grant should do. One of these moral burden is to assist to every single presentation and try to provide useful feedback.
@@ -29,7 +28,7 @@ Experiments have been increasing in popularity in economics, as a effect of the 
 
 Finding the optimal sample size is definitely one of the main concerns a researcher should have when she designs an experiment. For this matter, there exist the so-called **Power Analysis**, a process of estimating the minimum (optimal) sample size needed to detect an effect given a treatment at a desirable significance level.  
 
-@List2011[] argue that there are three main aspects we should consider in order to calculate the optimal sample size.
+@List2011[] argue that there are three main aspects we should consider in order to calculate the optimal sample size:
 
 1. Significance level
 1. Power

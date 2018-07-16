@@ -1,0 +1,25 @@
+---
+author: Obryan Poyser
+slug: about
+---
+
+Hi!
+
+My name is Obryan Poyser, I am a predoctoral researcher in the Applied Economics program at *Universitat Autònoma de Barcelona*. Partially random is sorta like my bridge to systematize my thoughts, doubts, and concerns. In this blog, you will find posts regarding my interest such as:
+
+- Econometrics
+- Behavioral Economics
+- Machine Learning
+- Big Data
+- Economics of the Internet
+- Public Policy
+- Random topics
+
+```{r, echo=FALSE}
+library(networkD3)
+data(MisLinks, MisNodes)
+forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source",
+             Target = "target", Value = "value", NodeID = "name",
+             Group = "group", opacity = 0.4)
+```
+

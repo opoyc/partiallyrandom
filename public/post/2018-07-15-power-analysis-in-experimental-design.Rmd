@@ -8,6 +8,8 @@ categories:
 tags:
   - Power Analysis
   - R
+  - Experiments
+  - Causal inference
 type: post
 description: ""
 keywords:
@@ -26,7 +28,7 @@ Experiments have been increasing in popularity in economics, as a effect of the 
 
 Finding the optimal sample size is definitely one of the main concerns a researcher should have when she designs an experiment. For this matter, there exist the so-called **Power Analysis**, a process of estimating the minimum (optimal) sample size needed to detect an effect given a treatment at a desirable significance level.  
 
-@List2011[] argue that there are three main aspects we should consider in order to calculate the optimal sample size.
+@List2011[] argue that there are three main aspects we should consider in order to calculate the optimal sample size:
 
 1. Significance level
 1. Power

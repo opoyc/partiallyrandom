@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instagram on Partially Random</title>
+    <link>/tags/instagram/</link>
+    <description>Recent content in Instagram on Partially Random</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
+    <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
+    <copyright>(c) 2018 Copyright Partially Random</copyright>
+    <lastBuildDate>Thu, 07 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/instagram/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>World Cup players&#39; hype on Instagram</title>
+      <link>/2018/06/07/2018-06-07-collect-followers-on-instagram/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/06/07/2018-06-07-collect-followers-on-instagram/</guid>
+      <description>Javier is visiting me for a couple of days here in Barcelona. This silly guy is trying to measure the relation between social media representativeness and expectations of qualifying in the group phase of the World Cup. It seems that he is collecting the information going from page to page… I as a benevolent friend create a classic scraping function to make his life easier (maybe it can make your life better as well)</description>
+    </item>
+    
+  </channel>
+</rss>

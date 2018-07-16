@@ -24,6 +24,15 @@
     </item>
     
     <item>
+      <title>Causal Inference</title>
+      <link>/tags/causal-inference/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/causal-inference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Comunicación</title>
       <link>/tags/comunicaci%C3%B3n/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
@@ -51,11 +60,29 @@
     </item>
     
     <item>
+      <title>Experiments</title>
+      <link>/tags/experiments/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/experiments/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Flip Coin</title>
       <link>/tags/flip-coin/</link>
       <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/flip-coin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Instagram</title>
+      <link>/tags/instagram/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/instagram/</guid>
       <description></description>
     </item>
     
@@ -78,6 +105,15 @@
     </item>
     
     <item>
+      <title>Power Analysis</title>
+      <link>/tags/power-analysis/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/power-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Probability</title>
       <link>/tags/probability/</link>
       <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
@@ -89,7 +125,7 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/r/</guid>
       <description></description>
@@ -107,9 +143,18 @@
     <item>
       <title>Web Scraping</title>
       <link>/tags/web-scraping/</link>
-      <pubDate>Mon, 28 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/web-scraping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>World Cup</title>
+      <link>/tags/world-cup/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/world-cup/</guid>
       <description></description>
     </item>
     
