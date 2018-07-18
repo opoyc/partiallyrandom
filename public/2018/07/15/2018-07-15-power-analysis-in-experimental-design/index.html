@@ -60,7 +60,7 @@
     },
     "datePublished": "2018-07-15",
     "description": "",
-    "wordCount": 711
+    "wordCount": 1107
   }
 </script>
   
@@ -194,8 +194,8 @@
   <small>
     &middot; by Obryan Poyser
   
-  &middot; Read in about 4 min
-  &middot; (711 words)
+  &middot; Read in about 6 min
+  &middot; (1107 words)
   &middot; 
 <span class="share-box">Share this on:
     <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f07%2f15%2f2018-07-15-power-analysis-in-experimental-design%2f" onclick="window.open(this.href, 'mywin',
@@ -256,14 +256,16 @@
 <li><p>Type I: Probability of rejecting the null hypothesis given that it is true (false positive). Typically, it is referred as significance level <span class="math inline">\(\alpha\)</span> of the hypothesis test. <span class="math display">\[P(R|H_0=true)\]</span></p></li>
 <li><p>Type II: Probability of not rejecting (accepting for notational purposes) the null hypothesis given that it is false (false negative). Commonly, this decision error is described as <span class="math inline">\(\beta\)</span>. <span class="math display">\[P(A|H_0=false)\]</span></p></li>
 </ul>
-<p>The power is defined as the likelihood of correctly rejecting <span class="math inline">\(H_0\)</span> when it was actually false, or <span class="math inline">\(1-\beta=1-P(A|H_0=false)\)</span>. The rule of thumb dictates a power equivalent of <span class="math inline">\(0.80\)</span>. Having all this information, it will be useful demostrate the use of power with an example for a couple of syntethic random variables.</p>
+<p>The power is defined as the likelihood of correctly rejecting <span class="math inline">\(H_0\)</span> when it was actually false, or <span class="math inline">\(1-\beta=1-P(A|H_0=false)\)</span>. The rule of thumb dictates a power equivalent of <span class="math inline">\(0.80\)</span>. Having all this information, it will be useful demostrate the use of power with an example for a couple of syntethic random variables. Let’s assume we run an experiment to test for the effect of advertising on monthly chocolate consumption, described as two normal distributions with <span class="math inline">\(\mu_1\sim N(40,5)\)</span> and <span class="math inline">\(\mu_2 \sim N(50,5)\)</span> for a control and treatment groups respectively.</p>
 <pre class="r"><code>require(tidyverse)
 require(ggridges)
 
+set.seed(29)
+
 # Two normal random variables with mean 40 and 50 respectively. 
-r1 &lt;- rnorm(n = 100000, 40, sd = 5)
-r2 &lt;- rnorm(n = 100000, 50, sd = 5)
-db &lt;- tibble(r1, r2) %&gt;%
+control &lt;- rnorm(n = 120, 40, sd = 3)
+treatment &lt;- rnorm(n = 120, 50, sd = 5)
+db &lt;- tibble(control, treatment) %&gt;%
     gather(key = &quot;random_var&quot;, value = &quot;value&quot;)
 
 # Graph
@@ -271,7 +273,63 @@ db %&gt;%
 ggplot(aes(value, random_var, fill=random_var))+
     geom_density_ridges(alpha=.8)</code></pre>
 <p><img src="/post/2018-07-15-power-analysis-in-experimental-design_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>Assume that we have <span class="math inline">\(\mu_1\sim N(40,5)\)</span> and <span class="math inline">\(\mu_2 \sim N(50,5)\)</span> for a control and treatment groups respectively. Suppose <span class="math inline">\(\delta\)</span> is the difference between the outcome of both subsamples, in other words <span class="math inline">\(\delta=\mu_1-\mu_2\)</span>. Typically, the null hypothesis <span class="math inline">\(H_0\)</span> is that there are no difference between groups (<span class="math inline">\(\delta=0\)</span>), while the alternative hypothesis <span class="math inline">\(H_1\)</span>.</p>
+<p>From the graph we can conclude that it is unlikely that the advertising is not affecting chocolate consumption since there is a noticeable difference in the means between the two groups. However, <em>ex-ante</em> in a experiment we would want to know the minimum sample size required to detect the effect of advertising, assuming that we have a good guess of the true parameters.</p>
+<p>(it depends on the mean <span class="math inline">\(\mu\)</span>, standard deviation <span class="math inline">\(\sigma\)</span>, observations <span class="math inline">\(n\)</span> and a given significance level <span class="math inline">\(\alpha\)</span>.)</p>
+<p>by calculating the values that make the difference significative. Recall that power is the probability of rejecting the null hypothesis when it is actually false. Moreover, it depends on the mean <span class="math inline">\(\mu\)</span>, standard deviation <span class="math inline">\(\sigma\)</span>, observations <span class="math inline">\(n\)</span> and a given significance level <span class="math inline">\(\alpha\)</span>.</p>
+<p>How many chocolates are neccesary to be consumed in order to reject the null hypothesis that <span class="math inline">\(H_0=40\)</span>?</p>
+<p>We know that at a significance level <span class="math inline">\(\alpha=0.05\)</span> the Z-score is <span class="math inline">\(1.96\)</span>, therefore we are looking for values that fall in the rejection region, that is: <span class="math display">\[
+\begin{align}
+Z\leq &amp; -1.96 \\
+Z\geq &amp; 1.96
+\end{align}
+\]</span> From the Z-score function we are able to calculate the minimum values of <span class="math inline">\(\bar{X}\)</span> in order to find a statistical significant difference:</p>
+<p><span class="math display">\[
+\begin{align}
+\frac{\bar{X}-\mu}{\sigma} &amp; \leq -1.96 &amp; \frac{\bar{X}-\mu}{\sigma} &amp; \geq 1.96 \\
+\newline
+\frac{\bar{X}-40}{3} &amp; \leq -1.96 &amp; \frac{\bar{X}-40}{3} &amp; \geq 1.96 \\
+\end{align}
+\]</span></p>
+<p>As a result the treatment average has to be either <span class="math inline">\(\bar{X} \leq\)</span> 33.495 or <span class="math inline">\(\bar{X} \geq\)</span> 45.919 in order to be statistically different from 40.</p>
+<pre class="r"><code>minF &lt;- function(x){
+    low &lt;- -1.96*sd(x)/sqrt(length(x))+mean(x)
+    up &lt;- 1.96*sd(x)/sqrt(length(x))+mean(x)
+    return(c(low, up))
+}
+
+min2F &lt;- function(mean, sd, n){
+    low &lt;- -1.96*sd/sqrt(n)+mean
+    up &lt;- 1.96*sd/sqrt(n)+mean
+    return(c(low, up))
+}</code></pre>
+<pre class="r"><code>db %&gt;%
+    filter(random_var==&quot;control&quot;) %&gt;%
+    ggplot(aes(value))+
+    geom_density(fill=&quot;black&quot;, alpha=.6)+
+    scale_x_continuous(limits = c(29,50))+
+    geom_vline(xintercept = c(33.4953796, 45.9189023), colour=&quot;red&quot;)</code></pre>
+<p><img src="/post/2018-07-15-power-analysis-in-experimental-design_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>let’s start by calculating the Z-Scores for <code>r1</code></p>
+<pre class="r"><code>zF=function(x){
+    z=(x-mean(x))/(sd(x)^2/sqrt(length(x)))
+    return(z)
+}</code></pre>
+<pre class="r"><code>test &lt;- rnorm(n = 120, 39, sd = 3) %&gt;%
+tibble(v1=., v2=db$value[db$random_var==&quot;control&quot;]) %&gt;% 
+    gather()
+t.test(test$value~test$key)</code></pre>
+<pre><code>## 
+##  Welch Two Sample t-test
+## 
+## data:  test$value by test$key
+## t = -2.5423, df = 237.46, p-value = 0.01165
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  -1.8917160 -0.2399219
+## sample estimates:
+## mean in group v1 mean in group v2 
+##         38.64132         39.70714</code></pre>
+<p>For now, Suppose <span class="math inline">\(\delta\)</span> is the difference between the outcome of both subsamples, in other words <span class="math inline">\(\delta=\mu_1-\mu_2\)</span>. Typically, the null hypothesis <span class="math inline">\(H_0\)</span> is that there are no difference between groups (<span class="math inline">\(\delta=0\)</span>), while the alternative hypothesis <span class="math inline">\(H_1\)</span>.</p>
 <p>In order to estimate the difference, we are going to use the independent t-test given by a formula:</p>
 <p><span class="math display">\[
 t=\frac{\mu_1-\mu_2}{\sqrt{\frac{S_1^2}{N_1}+\frac{S_2^2}{N_2}}}
@@ -280,10 +338,10 @@ t=\frac{\mu_1-\mu_2}{\sqrt{\frac{S_1^2}{N_1}+\frac{S_2^2}{N_2}}}
     group_by(random_var) %&gt;%
     summarise(mean(value), sd(value), n())</code></pre>
 <pre><code>## # A tibble: 2 x 4
-##   random_var `mean(value)` `sd(value)`  `n()`
-##   &lt;chr&gt;              &lt;dbl&gt;       &lt;dbl&gt;  &lt;int&gt;
-## 1 r1                  40.0        5.00 100000
-## 2 r2                  50.0        4.97 100000</code></pre>
+##   random_var `mean(value)` `sd(value)` `n()`
+##   &lt;chr&gt;              &lt;dbl&gt;       &lt;dbl&gt; &lt;int&gt;
+## 1 control             39.7        3.17   120
+## 2 treatment           50.0        5.37   120</code></pre>
 <p><span class="math display">\[
 t=\frac{39.99648-49.99105}{\sqrt{25/100000+25/100000}}=-447
 \]</span> Which can be calculated directly by:</p>
@@ -292,13 +350,13 @@ t=\frac{39.99648-49.99105}{\sqrt{25/100000+25/100000}}=-447
 ##  Welch Two Sample t-test
 ## 
 ## data:  db$value by db$random_var
-## t = -447.39, df = 199990, p-value &lt; 2.2e-16
+## t = -18.104, df = 192.93, p-value &lt; 2.2e-16
 ## alternative hypothesis: true difference in means is not equal to 0
 ## 95 percent confidence interval:
-##  -10.023005  -9.935569
+##  -11.427904  -9.182467
 ## sample estimates:
-## mean in group r1 mean in group r2 
-##         40.00074         49.98003</code></pre>
+##   mean in group control mean in group treatment 
+##                39.70714                50.01233</code></pre>
 <div id="references" class="section level3 unnumbered">
 <h3>References</h3>
 <div id="refs" class="references">
