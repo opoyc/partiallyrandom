@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/07/19/2018-07-19-al-parecer-ya-no-me-puedo-molestar-por-que-me-digan-costarrique%C3%B1o/</loc>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/06/07/2018-06-07-collect-followers-on-instagram/</loc>
     <lastmod>2018-06-07T00:00:00+00:00</lastmod>
   </url>
@@ -10,11 +15,6 @@
   <url>
     <loc>/2018/05/28/2018-05-28-getting-science-direct-articles/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/2018/05/19/2018-05-19-why-bounded-rationality/</loc>
-    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -80,19 +80,19 @@
   
   <url>
     <loc>/tags/decision-making/</loc>
-    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/categories/economics/</loc>
-    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/education/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/lang/espa%C3%B1ol/</loc>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -115,6 +115,18 @@
   </url>
   
   <url>
+    <loc>/lang/</loc>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/lengua/</loc>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/music/</loc>
     <lastmod>2017-07-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -122,13 +134,13 @@
   
   <url>
     <loc>/categories/opinion/</loc>
-    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -150,7 +162,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
