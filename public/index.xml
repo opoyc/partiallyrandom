@@ -9,20 +9,10 @@
     <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
     <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
     <copyright>(c) 2018 Copyright Partially Random</copyright>
-    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Power analysis in experimental design</title>
-      <link>/2018/07/15/2018-07-15-power-analysis-in-experimental-design/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/2018/07/15/2018-07-15-power-analysis-in-experimental-design/</guid>
-      <description>A couple of weeks ago we had hour yearly Ph.D. workshop in which we present our project development. I’ve always moral sentiments around my duties regarding what someone like me who received a grant should do. One of these moral burdens is to assist to every single presentation and try to provide useful feedback.
-Long story short, a fellow Ph.D. student presented a draft of a experimental design. Aligned with my principles, I suggested her to be more humble regarding what she wanted to test, since there were far too many hypotheses she wanted to test for (i.</description>
-    </item>
     
     <item>
       <title>World Cup players&#39; hype on Instagram</title>
@@ -41,6 +31,15 @@ Long story short, a fellow Ph.D. student presented a draft of a experimental de
       <guid>/2018/05/28/2018-05-28-getting-science-direct-articles/</guid>
       <description>Lately, I have been reading a lot of articles within sciencedirect website. Now, after spending several hours reading and moving through pages I realize that it is time to create a snippet to get the articles right away. Hope it helps you too!
 Packages needed require(rvest) require(tidyverse) require(stringr)  Function ext_keyF &amp;lt;- function(key_word, journal){ s1 &amp;lt;- &amp;quot;https://www.sciencedirect.com/search?qs=&amp;quot; s2 &amp;lt;- &amp;quot;&amp;amp;pub=&amp;quot; s3 &amp;lt;- &amp;quot;&amp;amp;show=100&amp;amp;sortBy=relevance&amp;amp;articleTypes=FLA&amp;amp;lastSelectedFacet=articleTypes&amp;quot; key_t &amp;lt;- key_word %&amp;gt;% stringr::str_replace_all(&amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;) jour_t &amp;lt;- journal %&amp;gt;% stringr::str_replace_all(&amp;quot; &amp;quot;, &amp;quot;%20&amp;quot;) %&amp;gt;% stringr::str_replace_all(&amp;quot;&amp;amp;&amp;quot;, &amp;quot;%26&amp;quot;) link &amp;lt;- paste0(s1, key_t, s2, jour_t, s3) pages &amp;lt;- read_html(link) %&amp;gt;% html_nodes(&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Why bounded rationality?</title>
+      <link>/2018/05/19/2018-05-19-why-bounded-rationality/</link>
+      <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/05/19/2018-05-19-why-bounded-rationality/</guid>
+      <description>I feel impressed how many years were necessary to find the</description>
     </item>
     
     <item>

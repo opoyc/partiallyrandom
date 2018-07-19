@@ -180,11 +180,10 @@ url = "https://github.com/opoyc"
 [[Languages.en.menu.main]]
 parent = "contact"
 name = "Email"
-pre = "<i class='fa fa-github'></i>"
+pre = "<i class='fa fa-envelope'></i>"
 identifier = "email"
 weight = 2
 url = "mailto:opoyserc@gmail.com"
-
 
 [[Languages.en.menu.main]]
 name = "Tags"

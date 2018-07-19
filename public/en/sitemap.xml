@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/2018/07/15/2018-07-15-power-analysis-in-experimental-design/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/2018/06/07/2018-06-07-collect-followers-on-instagram/</loc>
     <lastmod>2018-06-07T00:00:00+00:00</lastmod>
   </url>
@@ -15,6 +10,11 @@
   <url>
     <loc>/2018/05/28/2018-05-28-getting-science-direct-articles/</loc>
     <lastmod>2018-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2018/05/19/2018-05-19-why-bounded-rationality/</loc>
+    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -73,12 +73,6 @@
   </url>
   
   <url>
-    <loc>/tags/causal-inference/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/comunicaci%C3%B3n/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -86,19 +80,19 @@
   
   <url>
     <loc>/tags/decision-making/</loc>
-    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/economics/</loc>
+    <lastmod>2018-05-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/education/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/experiments/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -134,7 +128,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -156,13 +150,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/power-analysis/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -174,7 +162,7 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,7 +174,7 @@
   
   <url>
     <loc>/categories/statistics/</loc>
-    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

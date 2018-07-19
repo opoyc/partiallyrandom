@@ -9,20 +9,10 @@
     <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
     <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
     <copyright>(c) 2018 Copyright Partially Random</copyright>
-    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/statistics/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Power analysis in experimental design</title>
-      <link>/2018/07/15/2018-07-15-power-analysis-in-experimental-design/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/2018/07/15/2018-07-15-power-analysis-in-experimental-design/</guid>
-      <description>A couple of weeks ago we had hour yearly Ph.D. workshop in which we present our project development. I’ve always moral sentiments around my duties regarding what someone like me who received a grant should do. One of these moral burdens is to assist to every single presentation and try to provide useful feedback.
-Long story short, a fellow Ph.D. student presented a draft of a experimental design. Aligned with my principles, I suggested her to be more humble regarding what she wanted to test, since there were far too many hypotheses she wanted to test for (i.</description>
-    </item>
     
     <item>
       <title>Example of frequentist perspective of probability</title>
