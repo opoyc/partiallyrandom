@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/07/19/2018-07-19-digame-costariquenyo-por-favor/</loc>
     <lastmod>2018-07-19T00:00:00+00:00</lastmod>
   </url>
@@ -64,6 +69,12 @@
   <url>
     <loc>/tags/bayesian/</loc>
     <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/categorical-variable/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -140,7 +151,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -162,7 +173,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -175,6 +186,12 @@
   <url>
     <loc>/tags/r/</loc>
     <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/r-language/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

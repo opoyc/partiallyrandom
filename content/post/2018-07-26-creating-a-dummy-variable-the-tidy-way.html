@@ -1,0 +1,191 @@
+---
+title: 'Creating a dummy variable: the Tidy way'
+author: Obryan Poyser
+date: '2018-07-26'
+slug: creating-a-dummy-variable-the-tidy-way
+categories:
+  - R Language
+tags:
+  - categorical variable
+type: post
+description: ""
+keywords:
+  - key
+  - words
+topics:
+  - topic 1
+---
+
+
+
+<p>Working with categorical variables in R can be a headache. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are useful to compare categorical variables in a regression. For instance, converting the variable <code>result</code> composed by a likert scale of order 3 (bad, good and excellent). In Stata you just type <code>tabulate result, generate(res)</code> as seen below:</p>
+<pre><code>tabulate result, generate(res)
+
+          result |      Freq.     Percent        Cum.
+ ----------------+-----------------------------------
+             bad |          2       40.00       40.00
+       excellent |          1       20.00       60.00
+            good |          2       40.00      100.00
+ ----------------+-----------------------------------
+           Total |          5      100.00
+</code></pre>
+<p>The result will be:</p>
+<pre><code>describe
+
+ Contains data
+   obs:             5                          
+  vars:             4                          
+  size:           110 (99.9% of memory free)
+ ------------------------------------------------------------------------
+               storage  display     value
+ variable name   type   format      label      variable label
+ ------------------------------------------------------------------------
+ result          str15  %15s                   
+ res1            byte   %8.0g                  result==bad
+ res2            byte   %8.0g                  result==excellent
+ res3            byte   %8.0g                  result==good
+ ------------------------------------------------------------------------
+ Sorted by:  
+      Note:  dataset has changed since last saved
+ 
+list
+
+      +--------------------------------+
+      |    result   res1   res2   res3 |
+      |--------------------------------|
+   1. |      good      0      0      1 |
+   2. |       bad      1      0      0 |
+   3. |      good      0      0      1 |
+   4. | excellent      0      1      0 |
+   5. |       bad      1      0      0 |
+      +--------------------------------+</code></pre>
+<p>As you can note the are 3 new variables <code>res1, res2</code> and <code>res3</code>. Easy isn’t? Well, in R I haven’t found yet a easy way to emulate the same process. Since recently I had to “tidy” a survey I collected in Internet, some variables were of the type “multiple choice”, moreover, every option (category) was identified by a number. Below you can find a example:</p>
+<pre class="r"><code>db &lt;- data.frame(mult_choice1=c(&quot;1,2&quot;, &quot;2,4,6&quot;, &quot;5,6&quot;), age=c(23, 30, 18), education=c(&quot;primary&quot;, &quot;secondary&quot;, &quot;tertiary&quot;))
+db %&gt;%
+    knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">mult_choice1</th>
+<th align="right">age</th>
+<th align="left">education</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1,2</td>
+<td align="right">23</td>
+<td align="left">primary</td>
+</tr>
+<tr class="even">
+<td align="left">2,4,6</td>
+<td align="right">30</td>
+<td align="left">secondary</td>
+</tr>
+<tr class="odd">
+<td align="left">5,6</td>
+<td align="right">18</td>
+<td align="left">tertiary</td>
+</tr>
+</tbody>
+</table>
+<p>What I needed was to convert <code>option=1</code> to a dummy variable that could be binded to the original dataframe. Then I created the code below:</p>
+<pre class="r"><code>tocolF &lt;- function(df, var, sep=&quot;,&quot;, names=NULL){
+    if(!require(tidyverse)){
+        install.packages(&quot;tidyverse&quot;)
+        require(tidyverse)
+        }
+    if(!require(janitor)){
+        install.packages(&quot;janitor&quot;)
+        require(janitor)
+            }
+    varname &lt;- deparse(substitute(var))
+    unique &lt;- df %&gt;%
+        .[var] %&gt;%
+        .[[1]] %&gt;%
+        stringr::str_split(pattern = sep) %&gt;%
+        unlist() %&gt;%
+        unique()
+    if(is.null(names)==F){
+        lab0 &lt;- names %&gt;%
+            as.data.frame() %&gt;%
+            tibble::rownames_to_column() %&gt;%
+            set_names(c(&quot;rowname&quot;, &quot;value&quot;))
+        lab1 &lt;- unique %&gt;%
+            as.tibble() %&gt;%
+            left_join(lab0, by=&quot;value&quot;)
+    } else {
+        message(&quot;Unique categories are going to be used&quot;)
+    }
+    
+    if(is.null(names)==T){
+        purrr::map(unique, function(x) {
+            stringr::str_detect(string = df[var] %&gt;%
+                                    .[[1]], pattern = paste0(&quot;(?:^|\\W)&quot;, x, &quot;(?:$|\\W)&quot;)) %&gt;%
+                as.numeric()
+        }) %&gt;%
+            bind_cols() %&gt;%
+            set_names(paste0(varname,&quot;_&quot;, unique)) %&gt;%
+            janitor::clean_names()
+    } else {
+        purrr::map(lab1$value, function(x) {
+            stringr::str_detect(string = df[var] %&gt;%
+                                    .[[1]], pattern = paste0(&quot;(?:^|\\W)&quot;, x, &quot;(?:$|\\W)&quot;)) %&gt;%
+                as.numeric()
+        }) %&gt;%
+            bind_cols() %&gt;%
+            set_names(paste0(varname,&quot;_&quot;, lab1$rowname)) %&gt;%
+            janitor::clean_names()
+    }
+}</code></pre>
+<p>The process to convert individual choices to binary variables is done by the <em>tidy</em> form:</p>
+<pre class="r"><code>db %&gt;%
+    bind_cols(tocolF(., &quot;mult_choice1&quot;)) %&gt;%
+    knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">mult_choice1</th>
+<th align="right">age</th>
+<th align="left">education</th>
+<th align="right">mult_choice1_1</th>
+<th align="right">mult_choice1_2</th>
+<th align="right">mult_choice1_4</th>
+<th align="right">mult_choice1_6</th>
+<th align="right">mult_choice1_5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1,2</td>
+<td align="right">23</td>
+<td align="left">primary</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">2,4,6</td>
+<td align="right">30</td>
+<td align="left">secondary</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">5,6</td>
+<td align="right">18</td>
+<td align="left">tertiary</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>Voilà! Happy tidying! :D</p>
