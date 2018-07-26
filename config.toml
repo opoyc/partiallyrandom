@@ -104,7 +104,7 @@ SidebarRecentLimit = 5
 
 # Select a syntax highlight.
 # Check the static/css/highlight directory for options.
-highlight = "monokai"
+highlight = "xcode"
 
 # Google Analytics.
 googleAnalytics = "UA-97643146-4"
