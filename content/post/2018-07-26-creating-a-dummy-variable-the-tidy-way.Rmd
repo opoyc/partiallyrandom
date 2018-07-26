@@ -19,6 +19,8 @@ topics:
 ```{r, echo=FALSE, message=F, warning=F}
 require(janitor)
 require(tidyverse)
+require(kableExtra)
+require(DT)
 ```
 
 
@@ -76,7 +78,7 @@ As you can note the are 3 new variables res1, res2, and res3. Easy isn’t? Well
 ```{r}
 db <- data.frame(mult_choice1=c("1,2", "2,4,6", "5,6"), age=c(23, 30, 18), education=c("primary", "secondary", "tertiary"))
 db %>%
-    knitr::kable()
+    DT::datatable()
 ```
 
 What I needed was to convert option=1 to a dummy variable that could be bound to the original data frame. In order to solve this problem I created the code below:
@@ -137,7 +139,7 @@ The process to convert individual choices to binary variables is done by a _tidy
 ```{r, warning=F, message=FALSE}
 db %>%
     bind_cols(tocolF(., "mult_choice1")) %>%
-    knitr::kable()
+    DT::datatable()
 ```
 
 It works also with single category variable such as `education`
@@ -145,7 +147,7 @@ It works also with single category variable such as `education`
 ```{r, warning=F, message=FALSE}
 db %>%
     bind_cols(tocolF(., "education")) %>%
-    knitr::kable()
+    DT::datatable()
 ```
 
 Voilà! Happy tidying! :D

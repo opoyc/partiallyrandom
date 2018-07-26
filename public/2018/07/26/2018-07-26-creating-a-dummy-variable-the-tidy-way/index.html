@@ -60,7 +60,7 @@
     },
     "datePublished": "2018-07-26",
     "description": "",
-    "wordCount": 533
+    "wordCount": 500
   }
 </script>
   
@@ -195,7 +195,7 @@
     &middot; by Obryan Poyser
   
   &middot; Read in about 3 min
-  &middot; (533 words)
+  &middot; (500 words)
   &middot; 
 <span class="share-box">Share this on:
     <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
@@ -235,7 +235,18 @@
 
 
       <div class="content">
-  <p>Working with categorical variables in R can be a headache sometimes. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are used to compare categorical variables in a regression. For instance, converting the variable result composed by a Likert scale of order 3 (bad, good and excellent). In Stata you just type tabulate result, generate(res) as seen below:</p>
+  <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p>Working with categorical variables in R can be a headache sometimes. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are used to compare categorical variables in a regression. For instance, converting the variable result composed by a Likert scale of order 3 (bad, good and excellent). In Stata you just type tabulate result, generate(res) as seen below:</p>
 <pre><code>tabulate result, generate(res)
 
           result |      Freq.     Percent        Cum.
@@ -279,33 +290,9 @@ list
 <p>As you can note the are 3 new variables res1, res2, and res3. Easy isn’t? Well, in R I haven’t found yet an easy way to emulate the process. Recently I had to “tidy” a survey that I’ve collected on the Internet, in it, some variables were of the type “multiple choice”, particularly every option (category) was identified by a number. Below you can find an example:</p>
 <pre class="r"><code>db &lt;- data.frame(mult_choice1=c(&quot;1,2&quot;, &quot;2,4,6&quot;, &quot;5,6&quot;), age=c(23, 30, 18), education=c(&quot;primary&quot;, &quot;secondary&quot;, &quot;tertiary&quot;))
 db %&gt;%
-    knitr::kable()</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">mult_choice1</th>
-<th align="right">age</th>
-<th align="left">education</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">1,2</td>
-<td align="right">23</td>
-<td align="left">primary</td>
-</tr>
-<tr class="even">
-<td align="left">2,4,6</td>
-<td align="right">30</td>
-<td align="left">secondary</td>
-</tr>
-<tr class="odd">
-<td align="left">5,6</td>
-<td align="right">18</td>
-<td align="left">tertiary</td>
-</tr>
-</tbody>
-</table>
+    DT::datatable()</code></pre>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3"],["1,2","2,4,6","5,6"],[23,30,18],["primary","secondary","tertiary"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mult_choice1<\/th>\n      <th>age<\/th>\n      <th>education<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>What I needed was to convert option=1 to a dummy variable that could be bound to the original data frame. In order to solve this problem I created the code below:</p>
 <pre class="r"><code>tocolF &lt;- function(df, var, sep=&quot;,&quot;, names=NULL){
     if(!require(tidyverse)){
@@ -358,95 +345,15 @@ db %&gt;%
 <p>The process to convert individual choices to binary variables is done by a <em>tidy</em> form:</p>
 <pre class="r"><code>db %&gt;%
     bind_cols(tocolF(., &quot;mult_choice1&quot;)) %&gt;%
-    knitr::kable()</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">mult_choice1</th>
-<th align="right">age</th>
-<th align="left">education</th>
-<th align="right">mult_choice1_1</th>
-<th align="right">mult_choice1_2</th>
-<th align="right">mult_choice1_4</th>
-<th align="right">mult_choice1_6</th>
-<th align="right">mult_choice1_5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">1,2</td>
-<td align="right">23</td>
-<td align="left">primary</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">2,4,6</td>
-<td align="right">30</td>
-<td align="left">secondary</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">5,6</td>
-<td align="right">18</td>
-<td align="left">tertiary</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">1</td>
-</tr>
-</tbody>
-</table>
+    DT::datatable()</code></pre>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","data":[["1","2","3"],["1,2","2,4,6","5,6"],[23,30,18],["primary","secondary","tertiary"],[1,0,0],[1,1,0],[0,1,0],[0,1,1],[0,0,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mult_choice1<\/th>\n      <th>age<\/th>\n      <th>education<\/th>\n      <th>mult_choice1_1<\/th>\n      <th>mult_choice1_2<\/th>\n      <th>mult_choice1_4<\/th>\n      <th>mult_choice1_6<\/th>\n      <th>mult_choice1_5<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,4,5,6,7,8]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>It works also with single category variable such as <code>education</code></p>
 <pre class="r"><code>db %&gt;%
     bind_cols(tocolF(., &quot;education&quot;)) %&gt;%
-    knitr::kable()</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">mult_choice1</th>
-<th align="right">age</th>
-<th align="left">education</th>
-<th align="right">education_primary</th>
-<th align="right">education_secondary</th>
-<th align="right">education_tertiary</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">1,2</td>
-<td align="right">23</td>
-<td align="left">primary</td>
-<td align="right">1</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">2,4,6</td>
-<td align="right">30</td>
-<td align="left">secondary</td>
-<td align="right">0</td>
-<td align="right">1</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">5,6</td>
-<td align="right">18</td>
-<td align="left">tertiary</td>
-<td align="right">0</td>
-<td align="right">0</td>
-<td align="right">1</td>
-</tr>
-</tbody>
-</table>
+    DT::datatable()</code></pre>
+<div id="htmlwidget-3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"filter":"none","data":[["1","2","3"],["1,2","2,4,6","5,6"],[23,30,18],["primary","secondary","tertiary"],[1,0,0],[0,1,0],[0,0,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mult_choice1<\/th>\n      <th>age<\/th>\n      <th>education<\/th>\n      <th>education_primary<\/th>\n      <th>education_secondary<\/th>\n      <th>education_tertiary<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,4,5,6]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 <p>Voilà! Happy tidying! :D</p>
 
 </div>
