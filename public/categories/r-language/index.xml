@@ -20,8 +20,7 @@
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/</guid>
-      <description>Working with categorical variables in R can be a headache. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are useful to compare categorical variables in a regression. For instance, converting the variable result composed by a likert scale of order 3 (bad, good and excellent). In Stata you just type tabulate result, generate(res) as seen below:
-tabulate result, generate(res) result | Freq.</description>
+      <description>Working with categorical variables in R can be a headache sometimes. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are used to compare categorical variables in a regression. For instance, converting the variable result composed by a Likert scale of order 3 (bad, good and excellent). In Stata you just type tabulate result, generate(res) as seen below:</description>
     </item>
     
   </channel>

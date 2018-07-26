@@ -22,7 +22,7 @@ require(tidyverse)
 ```
 
 
-Working with categorical variables in R can be a headache. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are useful to compare categorical variables in a regression. For instance, converting the variable `result` composed by a likert scale of order 3 (bad, good and excellent). In Stata you just type `tabulate result, generate(res)` as seen below:
+Working with categorical variables in R can be a headache sometimes. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are used to compare categorical variables in a regression. For instance, converting the variable result composed by a Likert scale of order 3 (bad, good and excellent). In Stata you just type tabulate result, generate(res) as seen below:
 
 ```
 tabulate result, generate(res)
@@ -71,7 +71,7 @@ list
       +--------------------------------+
 ```
 
-As you can note the are 3 new variables `res1, res2` and `res3`. Easy isn't? Well, in R I haven't found yet a easy way to emulate the same process. Since recently I had to "tidy" a survey I collected in Internet, some variables were of the type "multiple choice", moreover, every option (category) was identified by a number. Below you can find a example:
+As you can note the are 3 new variables res1, res2, and res3. Easy isn’t? Well, in R I haven’t found yet an easy way to emulate the process. Recently I had to “tidy” a survey that I’ve collected on the Internet, in it, some variables were of the type “multiple choice”, particularly every option (category) was identified by a number. Below you can find an example:
 
 ```{r}
 db <- data.frame(mult_choice1=c("1,2", "2,4,6", "5,6"), age=c(23, 30, 18), education=c("primary", "secondary", "tertiary"))
@@ -79,7 +79,7 @@ db %>%
     knitr::kable()
 ```
 
-What I needed was to convert `option=1` to a dummy variable that could be binded to the original dataframe. Then I created the code below:
+What I needed was to convert option=1 to a dummy variable that could be bound to the original data frame. In order to solve this problem I created the code below:
 
 ```{r}
 tocolF <- function(df, var, sep=",", names=NULL){
@@ -132,11 +132,19 @@ tocolF <- function(df, var, sep=",", names=NULL){
 }
 ```
 
-The process to convert individual choices to binary variables is done by the _tidy_ form:
+The process to convert individual choices to binary variables is done by a _tidy_ form:
 
 ```{r, warning=F, message=FALSE}
 db %>%
     bind_cols(tocolF(., "mult_choice1")) %>%
+    knitr::kable()
+```
+
+It works also with single category variable such as `education`
+
+```{r, warning=F, message=FALSE}
+db %>%
+    bind_cols(tocolF(., "education")) %>%
     knitr::kable()
 ```
 

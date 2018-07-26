@@ -60,7 +60,7 @@
     },
     "datePublished": "2018-07-26",
     "description": "",
-    "wordCount": 484
+    "wordCount": 533
   }
 </script>
   
@@ -195,7 +195,7 @@
     &middot; by Obryan Poyser
   
   &middot; Read in about 3 min
-  &middot; (484 words)
+  &middot; (533 words)
   &middot; 
 <span class="share-box">Share this on:
     <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
@@ -235,7 +235,7 @@
 
 
       <div class="content">
-  <p>Working with categorical variables in R can be a headache. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are useful to compare categorical variables in a regression. For instance, converting the variable <code>result</code> composed by a likert scale of order 3 (bad, good and excellent). In Stata you just type <code>tabulate result, generate(res)</code> as seen below:</p>
+  <p>Working with categorical variables in R can be a headache sometimes. Among the things I miss the most in Stata is how easy is to convert categorical variables to dummy/binary variables which are used to compare categorical variables in a regression. For instance, converting the variable result composed by a Likert scale of order 3 (bad, good and excellent). In Stata you just type tabulate result, generate(res) as seen below:</p>
 <pre><code>tabulate result, generate(res)
 
           result |      Freq.     Percent        Cum.
@@ -276,7 +276,7 @@ list
    4. | excellent      0      1      0 |
    5. |       bad      1      0      0 |
       +--------------------------------+</code></pre>
-<p>As you can note the are 3 new variables <code>res1, res2</code> and <code>res3</code>. Easy isn’t? Well, in R I haven’t found yet a easy way to emulate the same process. Since recently I had to “tidy” a survey I collected in Internet, some variables were of the type “multiple choice”, moreover, every option (category) was identified by a number. Below you can find a example:</p>
+<p>As you can note the are 3 new variables res1, res2, and res3. Easy isn’t? Well, in R I haven’t found yet an easy way to emulate the process. Recently I had to “tidy” a survey that I’ve collected on the Internet, in it, some variables were of the type “multiple choice”, particularly every option (category) was identified by a number. Below you can find an example:</p>
 <pre class="r"><code>db &lt;- data.frame(mult_choice1=c(&quot;1,2&quot;, &quot;2,4,6&quot;, &quot;5,6&quot;), age=c(23, 30, 18), education=c(&quot;primary&quot;, &quot;secondary&quot;, &quot;tertiary&quot;))
 db %&gt;%
     knitr::kable()</code></pre>
@@ -306,7 +306,7 @@ db %&gt;%
 </tr>
 </tbody>
 </table>
-<p>What I needed was to convert <code>option=1</code> to a dummy variable that could be binded to the original dataframe. Then I created the code below:</p>
+<p>What I needed was to convert option=1 to a dummy variable that could be bound to the original data frame. In order to solve this problem I created the code below:</p>
 <pre class="r"><code>tocolF &lt;- function(df, var, sep=&quot;,&quot;, names=NULL){
     if(!require(tidyverse)){
         install.packages(&quot;tidyverse&quot;)
@@ -355,7 +355,7 @@ db %&gt;%
             janitor::clean_names()
     }
 }</code></pre>
-<p>The process to convert individual choices to binary variables is done by the <em>tidy</em> form:</p>
+<p>The process to convert individual choices to binary variables is done by a <em>tidy</em> form:</p>
 <pre class="r"><code>db %&gt;%
     bind_cols(tocolF(., &quot;mult_choice1&quot;)) %&gt;%
     knitr::kable()</code></pre>
@@ -401,6 +401,48 @@ db %&gt;%
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">1</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<p>It works also with single category variable such as <code>education</code></p>
+<pre class="r"><code>db %&gt;%
+    bind_cols(tocolF(., &quot;education&quot;)) %&gt;%
+    knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">mult_choice1</th>
+<th align="right">age</th>
+<th align="left">education</th>
+<th align="right">education_primary</th>
+<th align="right">education_secondary</th>
+<th align="right">education_tertiary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1,2</td>
+<td align="right">23</td>
+<td align="left">primary</td>
+<td align="right">1</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">2,4,6</td>
+<td align="right">30</td>
+<td align="left">secondary</td>
+<td align="right">0</td>
+<td align="right">1</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">5,6</td>
+<td align="right">18</td>
+<td align="left">tertiary</td>
+<td align="right">0</td>
+<td align="right">0</td>
 <td align="right">1</td>
 </tr>
 </tbody>
