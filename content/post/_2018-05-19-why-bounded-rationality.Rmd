@@ -9,6 +9,8 @@ tags:
   - Decision-making
 description: ''
 thumbnail: ''
+lang:
+  - english
 ---
 
-I feel impressed how many years were necessary to find the 
+I feel impressed how many years were necessary to find the

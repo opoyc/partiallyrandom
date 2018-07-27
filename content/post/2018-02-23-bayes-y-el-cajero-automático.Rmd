@@ -9,6 +9,8 @@ tags:
   - Bayesian
   - Decision-making
 thumbnail: "/img/atm.png"
+lang:
+  - english
 ---
 
 Hace unos años cuando cursaba el grado en economía en la Universidad Nacional me llamó mucho la atención un fenómeno recurrente en las personas que sacan dinero en los ATM y que ahora tiene mucho más sentido.

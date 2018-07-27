@@ -18,15 +18,17 @@ keywords:
 topics:
   - topic 1
 bibliography: allrefs.bib
+lang:
+  - english
 ---
 
 A couple of weeks ago we had hour yearly Ph.D. workshop in which we present our project development. I've always moral sentiments around my duties regarding what someone like me who received a grant should do. One of these moral burdens is to assist to every single presentation and try to provide useful feedback.
 
 Long story short, a fellow Ph.D. student presented a draft of a experimental design. Aligned with my principles, I suggested her to be more humble regarding what she wanted to test, since there were far too many hypotheses she wanted to test for (i.e. treatments) which certainly would limit her sample within and between groups. As a consequence, she replied: *How big do you think my sample should be?*, to be honest, I couldn't provide her with an exact answer, this post is a result of my deficient feedback.
 
-Experiments have been increasing in popularity in economics, as an effect of the "empirical revolution" trending as a whole as well as an increasing criticism on identification assumptions when the objective is to find a causal effect in observational data. Indeed, experiments let us identify a cause for certain phenomena easier, nevertheless, the design as well as the cost of realizing an experiment is not negligible. If something ends bad, most probably we won't have the same resources and opportunity to rerun it, hence, we must be careful to design an experiment that maximizes our testing expectations. 
+Experiments have been increasing in popularity in economics, as an effect of the "empirical revolution" trending as a whole as well as an increasing criticism on identification assumptions when the objective is to find a causal effect in observational data. Indeed, experiments let us identify a cause for certain phenomena easier, nevertheless, the design as well as the cost of realizing an experiment is not negligible. If something ends bad, most probably we won't have the same resources and opportunity to rerun it, hence, we must be careful to design an experiment that maximizes our testing expectations.
 
-Finding the optimal sample size is definitely one of the main concerns a researcher should have when she designs an experiment. For this matter, there exist the so-called **Power Analysis**, a process of estimating the minimum (optimal) sample size needed to detect an effect given a treatment at the desired significance level.  
+Finding the optimal sample size is definitely one of the main concerns a researcher should have when she designs an experiment. For this matter, there exist the so-called **Power Analysis**, a process of estimating the minimum (optimal) sample size needed to detect an effect given a treatment at the desired significance level.
 
 
 @List2011[] argue that there are three main aspects we should consider in order to calculate the optimal sample size:
@@ -40,7 +42,7 @@ So, let's start by talking about significance level, by bringing back what we le
 + Type I: Probability of rejecting the null hypothesis given that it is true (false positive). Typically, it is referred as significance level $\alpha$ of the hypothesis test.
 $$P(R|H_0=true)$$
 
-+ Type II: Probability of not rejecting (accepting for notational purposes) the null hypothesis given that it is false (false negative). Commonly, this decision error is described as $\beta$. 
++ Type II: Probability of not rejecting (accepting for notational purposes) the null hypothesis given that it is false (false negative). Commonly, this decision error is described as $\beta$.
 $$P(A|H_0=false)$$
 
 The power is defined as the likelihood of correctly rejecting $H_0$ when it was actually false, or $1-\beta=1-P(A|H_0=false)$. The rule of thumb dictates a power equivalent of $0.80$. Having all this information, it will be useful demostrate the use of power with an example for a couple of syntethic random variables. Let's assume we run an experiment to test for the effect of advertising on monthly chocolate consumption, described as two normal distributions with $\mu_1\sim N(40,5)$ and $\mu_2 \sim N(50,5)$ for a control and treatment groups respectively.
@@ -51,7 +53,7 @@ require(ggridges)
 
 set.seed(29)
 
-# Two normal random variables with mean 40 and 50 respectively. 
+# Two normal random variables with mean 40 and 50 respectively.
 control <- rnorm(n = 120, 40, sd = 3)
 treatment <- rnorm(n = 120, 50, sd = 5)
 db <- tibble(control, treatment) %>%
@@ -135,14 +137,14 @@ zF=function(x){
 
 ```{r}
 test <- rnorm(n = 120, 39, sd = 3) %>%
-tibble(v1=., v2=db$value[db$random_var=="control"]) %>% 
+tibble(v1=., v2=db$value[db$random_var=="control"]) %>%
     gather()
 t.test(test$value~test$key)
 ```
 
 
-For now, 
-Suppose $\delta$ is the difference between the outcome of both subsamples, in other words $\delta=\mu_1-\mu_2$. Typically, the null hypothesis $H_0$ is that there are no difference between groups ($\delta=0$), while the alternative hypothesis $H_1$. 
+For now,
+Suppose $\delta$ is the difference between the outcome of both subsamples, in other words $\delta=\mu_1-\mu_2$. Typically, the null hypothesis $H_0$ is that there are no difference between groups ($\delta=0$), while the alternative hypothesis $H_1$.
 
 
 

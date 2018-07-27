@@ -8,6 +8,7 @@ tags:
     - Education
 bibliography: ddp.bib
 thumbnail: "/img/g1.png"
+lang: "español"
 ---
 
 Hoy pude ojear el [Sexto Informe del Estado de la Educación][l1] donde se abordó un tema que desde hace ratos me viene dando vueltas en la cabeza: la calidad de las y los profesores de secundaria. No voy a mentir, de entrada voy buscando qué está mal, porque mi percepción es que así es desde que leí el artículo [Profesores con fallas en Mate salieron de U privadas][l2] publicado hace casi 3 años. Los resultados son más que preocupantes, dado que de 1733 profesores evaluados (asumo que aleatoriamente):
@@ -43,7 +44,7 @@ En resumen: les están pagando bien [^2], que ojo, no cuestiono, **a un profesor
 
 > *"La mayoría de los estudiantes de 15 años se ubica en los dos niveles inferiores de desempeño, asociados a destrezas y habilidades elementales en las competencias científica, lectora y matemática."* [@IEE6, pág. 185]
 
-A mi me genera desazón, ya que podríamos decir que la educación es la punta de flecha de la estrategia país, y al parecer le estamos haciendo mella en lugar de meterle filo. Han pasado **tres** años de la nota y **siete** desde que fue aplicada la prueba y hasta el día de hoy no hay medidas concretas para evaluar y filtrar los docentes. 
+A mi me genera desazón, ya que podríamos decir que la educación es la punta de flecha de la estrategia país, y al parecer le estamos haciendo mella en lugar de meterle filo. Han pasado **tres** años de la nota y **siete** desde que fue aplicada la prueba y hasta el día de hoy no hay medidas concretas para evaluar y filtrar los docentes.
 
 Para cerrar, quiero dejar en claro mi preocupación respecto a qué estamos haciendo con el futuro de las y los costarricences proviene de la incertidumbre sobre el desempleo de mano de obra no calificada.  ¿Por qué? Debido al desarrollo de las actividades económicas alrededor de la robotización e inteligencia artificial. Veamos este dato:
 
@@ -66,5 +67,3 @@ Necesitamos para ayer un programa de selección de docentes, fundamentalmente en
 <div class="d">
 Referencias
 </div>
-
-

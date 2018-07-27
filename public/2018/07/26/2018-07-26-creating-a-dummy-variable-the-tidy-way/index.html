@@ -221,7 +221,9 @@
 <div class="margin-10">
   <i class="fa fa-tags"></i>
   
-  <a href="/tags/categorical-variable" class="label label-primary">categorical variable</a>
+  <a href="/tags/factor-variable" class="label label-primary">factor variable</a>
+  
+  <a href="/tags/dummy" class="label label-primary">dummy</a>
   
 
 
@@ -253,21 +255,21 @@
 <pre><code>describe
 
  Contains data
-   obs:             5                          
-  vars:             4                          
+   obs:             5
+  vars:             4
   size:           110 (99.9% of memory free)
  ------------------------------------------------------------------------
                storage  display     value
  variable name   type   format      label      variable label
  ------------------------------------------------------------------------
- result          str15  %15s                   
+ result          str15  %15s
  res1            byte   %8.0g                  result==bad
  res2            byte   %8.0g                  result==excellent
  res3            byte   %8.0g                  result==good
  ------------------------------------------------------------------------
- Sorted by:  
+ Sorted by:
       Note:  dataset has changed since last saved
- 
+
 list
 
       +--------------------------------+
@@ -283,7 +285,7 @@ list
 <pre class="r"><code>db &lt;- data.frame(mult_choice1=c(&quot;1,2&quot;, &quot;2,4,6&quot;, &quot;5,6&quot;), age=c(23, 30, 18), education=c(&quot;primary&quot;, &quot;secondary&quot;, &quot;tertiary&quot;))
 db %&gt;%
     knitr::kable() %&gt;%
-    kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;)) </code></pre>
+    kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;))</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -362,7 +364,7 @@ tertiary
     } else {
         message(&quot;Unique categories are going to be used&quot;)
     }
-    
+
     if(is.null(names)==T){
         purrr::map(unique, function(x) {
             stringr::str_detect(string = df[var] %&gt;%
@@ -387,7 +389,7 @@ tertiary
 <pre class="r"><code>db %&gt;%
     bind_cols(tocolF(., &quot;mult_choice1&quot;)) %&gt;%
     knitr::kable() %&gt;%
-    kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;)) </code></pre>
+    kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;))</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -502,7 +504,7 @@ tertiary
 <pre class="r"><code>db %&gt;%
     bind_cols(tocolF(., &quot;education&quot;)) %&gt;%
     knitr::kable() %&gt;%
-    kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;)) </code></pre>
+    kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;))</code></pre>
 <table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -719,7 +721,7 @@ tertiary
 
         <div class="content">
           <ul>
-            <li><a href="/categories/personal">personal</a></li><li><a href="/categories/opinion">opinion</a></li><li><a href="/categories/snippet">snippet</a></li><li><a href="/categories/r-language">r-language</a></li><li><a href="/categories/statistics">statistics</a></li>
+            <li><a href="/categories/personal">personal</a></li><li><a href="/categories/r-language">r-language</a></li><li><a href="/categories/opinion">opinion</a></li><li><a href="/categories/statistics">statistics</a></li>
           </ul>
         </div>
       </div>
@@ -732,7 +734,7 @@ tertiary
 
         <div class="content">
           <ul>
-            <li><a href="/lang/espa%C3%B1ol">español</a></li>
+            <li><a href="/lang/english">english</a></li><li><a href="/lang/espa%C3%B1ol">español</a></li>
           </ul>
         </div>
       </div>
@@ -745,7 +747,7 @@ tertiary
 
         <div class="content">
           <ul>
-            <li><a href="/tags/r">r</a></li><li><a href="/tags/bayesian">bayesian</a></li><li><a href="/tags/decision-making">decision-making</a></li><li><a href="/tags/web-scraping">web-scraping</a></li><li><a href="/tags/categorical-variable">categorical-variable</a></li><li><a href="/tags/comunicaci%C3%B3n">comunicación</a></li><li><a href="/tags/education">education</a></li><li><a href="/tags/flip-coin">flip-coin</a></li><li><a href="/tags/instagram">instagram</a></li><li><a href="/tags/journal-articles">journal-articles</a></li>
+            <li><a href="/tags/bayesian">bayesian</a></li><li><a href="/tags/decision-making">decision-making</a></li><li><a href="/tags/web-scraping">web-scraping</a></li><li><a href="/tags/comunicaci%C3%B3n">comunicación</a></li><li><a href="/tags/dummy">dummy</a></li><li><a href="/tags/education">education</a></li><li><a href="/tags/factor-variable">factor-variable</a></li><li><a href="/tags/flip-coin">flip-coin</a></li><li><a href="/tags/instagram">instagram</a></li><li><a href="/tags/journal-articles">journal-articles</a></li>
           </ul>
         </div>
       </div>

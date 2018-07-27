@@ -4,14 +4,15 @@ author: Obryan Poyser
 date: '2018-06-07'
 slug: collect-followers-on-instagram
 categories:
-  - snippet
+  - R-Language
 tags:
-  - R
   - Web-scraping
   - Instagram
   - World Cup
 description: ''
 thumbnail: ''
+lang:
+  - español
 ---
 
 [Javier](https://www.instagram.com/javs05/) is visiting me for a couple of days here in Barcelona. This silly guy is trying to measure the relation between social media representativeness and expectations of qualifying in the group phase of the World Cup. It seems that he is collecting the information going from page to page… I as a benevolent friend create a classic scraping function to make his life easier (maybe it can make your life better as well)
@@ -70,7 +71,7 @@ g1 <- dbIG %>%
    scale_x_log10()+
    scale_y_log10()+
    theme_minimal()+
-   labs(title="World Cup players: Followers vs following on Instagram", 
+   labs(title="World Cup players: Followers vs following on Instagram",
         y="Following (log)", x="Followers (log)")+
    stat_density2d(aes(fill=..level..,alpha=..level..),geom='polygon',colour='black')+
    geom_point(size=0.7)+
@@ -79,6 +80,3 @@ g1 <- dbIG %>%
 
 plotly::ggplotly(g1)
 ```
-
-
-

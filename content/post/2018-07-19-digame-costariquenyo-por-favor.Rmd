@@ -13,7 +13,7 @@ keywords:
   - key
   - words
 lang:
-  - Español
+  - español
 bibliography: allrefs.bib
 ---
 
@@ -36,5 +36,3 @@ En fin... Después de hoy toca aguantarse, y decir respetuosamente que nos gusta
 
 
 ### Referencias
-
-

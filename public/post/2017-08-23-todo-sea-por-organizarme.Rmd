@@ -5,7 +5,11 @@ date: '2017-04-26'
 slug: todo-sea-por-organizarme
 categories:
   - Personal
-tags: []
+tags:
+  - switching costs
+  - procastination
+lang:
+  - español
 ---
 
 Creo que el tema de querer hacer todo al mismo tiempo (no necesariamente en un orden lógico) comenzó en el colegio, esa época donde ya sentía la libertad de decidir cómo distribuir plenamente mi tiempo entre estudio y ocio. Debido en gran parte porque no tenía que contestar preguntas provenientes de mis padres sobre sí había hecho la tarea o no. Podría parecer tardío, pero en realidad no encuentro mejor punto de inflexión.

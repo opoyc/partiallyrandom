@@ -73,12 +73,6 @@
   </url>
   
   <url>
-    <loc>/tags/categorical-variable/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -96,14 +90,32 @@
   </url>
   
   <url>
+    <loc>/tags/dummy/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/education/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/lang/english/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/lang/espa%C3%B1ol/</loc>
     <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/factor-variable/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,7 +139,7 @@
   
   <url>
     <loc>/lang/</loc>
-    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,8 +196,14 @@
   </url>
   
   <url>
+    <loc>/tags/procastination/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,14 +214,14 @@
   </url>
   
   <url>
-    <loc>/categories/snippet/</loc>
-    <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <loc>/categories/statistics/</loc>
+    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/statistics/</loc>
-    <lastmod>2017-06-09T00:00:00+00:00</lastmod>
+    <loc>/tags/switching-costs/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,6 +246,12 @@
   <url>
     <loc>/tags/world-cup/</loc>
     <lastmod>2018-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/writecsv/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

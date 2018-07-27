@@ -24,15 +24,6 @@
     </item>
     
     <item>
-      <title>Categorical Variable</title>
-      <link>/tags/categorical-variable/</link>
-      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/tags/categorical-variable/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Comunicación</title>
       <link>/tags/comunicaci%C3%B3n/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
@@ -51,11 +42,29 @@
     </item>
     
     <item>
+      <title>Dummy</title>
+      <link>/tags/dummy/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/dummy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Education</title>
       <link>/tags/education/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Factor Variable</title>
+      <link>/tags/factor-variable/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/factor-variable/</guid>
       <description></description>
     </item>
     
@@ -114,11 +123,29 @@
     </item>
     
     <item>
+      <title>Procastination</title>
+      <link>/tags/procastination/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/procastination/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Switching Costs</title>
+      <link>/tags/switching-costs/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/switching-costs/</guid>
       <description></description>
     </item>
     
@@ -146,6 +173,15 @@
       <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/world-cup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writecsv</title>
+      <link>/tags/writecsv/</link>
+      <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/writecsv/</guid>
       <description></description>
     </item>
     
