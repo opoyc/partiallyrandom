@@ -19,7 +19,7 @@ In the new age of information, the common wisdom dictates that people acquire an
 
 In an Economic theory on demand for news assumes that individuals read, watch and listen to information according to a function that maximizes the utility for given better decision-making function. The competition will stem among the news providers to create content as precise as possible in order to motivate the readers, consume and profit from that market transaction. On the other side, non-economic describes a more subtle relationship between accuracy and interest, that is, quality is not the only driver of demand, instead, the reader has to be entertained with the product as well. We can call this component as *distraction utility (DU)*.
 
-```{r, echo=FALSE, warning=FALSE, fig.pos="H", fig.align='center', fig.height=1}
+```{r, echo=FALSE, warning=FALSE, fig.pos="H", fig.align='center', out.width="40%"}
 knitr::include_graphics(path = "/img/fight.jpg")
 ```
 
