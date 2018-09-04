@@ -24,6 +24,15 @@
     </item>
     
     <item>
+      <title>Bayesian Thinking</title>
+      <link>/tags/bayesian-thinking/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/bayesian-thinking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Comunicación</title>
       <link>/tags/comunicaci%C3%B3n/</link>
       <pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate>
@@ -42,11 +51,11 @@
     </item>
     
     <item>
-      <title>Dummy</title>
-      <link>/tags/dummy/</link>
+      <title>Dummy Variable</title>
+      <link>/tags/dummy-variable/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
-      <guid>/tags/dummy/</guid>
+      <guid>/tags/dummy-variable/</guid>
       <description></description>
     </item>
     
@@ -128,6 +137,15 @@
       <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
       <author>opoyserc@gmail.com (Obryan Poyser)</author>
       <guid>/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podcast</title>
+      <link>/tags/podcast/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/tags/podcast/</guid>
       <description></description>
     </item>
     

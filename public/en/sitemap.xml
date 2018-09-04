@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/2018/09/04/2018-09-04-what-motives-us/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url>
@@ -78,6 +83,12 @@
   </url>
   
   <url>
+    <loc>/tags/bayesian-thinking/</loc>
+    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -95,7 +106,7 @@
   </url>
   
   <url>
-    <loc>/tags/dummy/</loc>
+    <loc>/tags/dummy-variable/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -202,7 +213,13 @@
   
   <url>
     <loc>/categories/personal/</loc>
-    <lastmod>2018-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/podcast/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

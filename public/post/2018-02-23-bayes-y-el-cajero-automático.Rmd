@@ -6,11 +6,11 @@ slug: bayes-y-el-cajero-automático
 categories:
   - Personal
 tags:
-  - Bayesian
-  - Decision-making
+  - bayesian thinking
+  - decision-making
 thumbnail: "/img/atm.png"
 lang:
-  - english
+  - español
 ---
 
 Hace unos años cuando cursaba el grado en economía en la Universidad Nacional me llamó mucho la atención un fenómeno recurrente en las personas que sacan dinero en los ATM y que ahora tiene mucho más sentido.
@@ -21,7 +21,7 @@ Lo que les cuento no pasó una vez, sino muchas, y entre todas ellas llegó un d
 
 Más que orgulloso de haber hecho un descubrimiento (de esos insignificantes pero gratos) me puse a pensar sobre la cantidad inmensa de veces que asumo que la persona que esta antes tiene más y mejor información, no sólo en el ATM, sino en casi cualquier proceso de decisión presentado secuencialmente.
 
-![](/img/atm.png){width=60% align=center}
+<!-- ![](/img/atm.png){width=60% align=center} -->
 
 De eso hace más de 10 años, y hasta hace poco descubrí que era en realidad un sesgo cognitivo documentado. En el caso de los eventos donde ignoramos nuestra información privada y acogemos la señal externa como la verdadera se llama _cascadas de información_ (otros autores tienen otros nombres, pero la lógica es similar). Es algo así como un acceso directo que tenemos en nuestro cableado que nos permite reaccionar rápidamente pero que puede fallar en tareas más complejas. Así mismo, éste proceso debe ser interrumpido con un esfuerzo consciente; los escenarios donde sucede esto son muchísimos.
 

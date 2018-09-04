@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcast on Partially Random</title>
+    <link>/tags/podcast/</link>
+    <description>Recent content in Podcast on Partially Random</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
+    <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
+    <copyright>(c) 2018 Copyright Partially Random</copyright>
+    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What motives us?</title>
+      <link>/2018/09/04/2018-09-04-what-motives-us/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/09/04/2018-09-04-what-motives-us/</guid>
+      <description>I listened this podcast yesterday morning, better than breakfast… Well almost as good, they’re actually more like complementary goods. 😅 😅</description>
+    </item>
+    
+  </channel>
+</rss>
