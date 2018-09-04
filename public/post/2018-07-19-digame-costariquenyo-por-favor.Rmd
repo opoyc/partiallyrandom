@@ -4,14 +4,12 @@ author: Obryan Poyser
 date: '2018-07-19'
 slug: digame-costarriquenyo
 categories:
-  - Opinion
+  - personal
 tags:
-  - Lengua
+  - lenguaje
+  - costa rica
 type: post
 description:
-keywords:
-  - key
-  - words
 lang:
   - español
 bibliography: pr.bib
@@ -23,7 +21,12 @@ No obstante... Actualmente hay algo que todavía hace saltar esa venita que teng
 
 Peeero, resulta que por un comentario de un compa me entró la curiosidad de buscar sobre su etilomología y encontré con el libro de @losada2004tribuna y rescato éstos parrafos:
 
-![](/img/costariquenyo.jpg){width=70%}
+```{r, echo=FALSE, warning=FALSE, fig.pos="H", fig.align='center', out.width="70%"}
+knitr::include_graphics("/img/costariquenyo.jpg")
+```
+
+
+<!-- ![](/img/costariquenyo.jpg){width=70%} -->
 
 \newline
 \newline
@@ -34,5 +37,7 @@ Así como lo leen señoras y señores, el "costarriqueño" *probablemente* se re
 
 En fin... Después de hoy toca aguantarse, y decir respetuosamente que nos gusta más costarricenses y de cariño ticxs.
 
+\newline
+\newline
 
-### Referencias
+**Referencias**
