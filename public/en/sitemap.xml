@@ -83,6 +83,12 @@
   </url>
   
   <url>
+    <loc>/tags/competition/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/comunicaci%C3%B3n/</loc>
     <lastmod>2017-05-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -90,7 +96,7 @@
   
   <url>
     <loc>/tags/decision-making/</loc>
-    <lastmod>2018-03-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,7 +120,7 @@
   
   <url>
     <loc>/lang/english/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -150,7 +156,7 @@
   
   <url>
     <loc>/lang/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
