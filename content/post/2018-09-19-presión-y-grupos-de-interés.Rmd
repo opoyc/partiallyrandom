@@ -1,0 +1,24 @@
+---
+title: Presión y grupos de interés
+author: Obryan Poyser
+date: '2018-09-19'
+slug: presión-y-grupos-de-interés
+categories:
+  - Economics
+tags:
+  - sindicatos
+type: post
+description: description
+keywords:
+  - key
+  - words
+topics:
+  - topic 1
+---
+
+Receta para que me concedan beneficios como grupo de interés
+
+1. Extraer información que respalde una posición
+2. Llevar ésta información al público
+3. Realizar actividades disruptivas para forzar a los tomadores de decisiones a seguir sus peticiones
+4. La prensa basa su negocio en la venta de publicidad 

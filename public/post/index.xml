@@ -9,10 +9,38 @@
     <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
     <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
     <copyright>(c) 2018 Copyright Partially Random</copyright>
-    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is to be econo-rational?</title>
+      <link>/2018/10/23/2018-10-23-what-is-to-be-rational/</link>
+      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/10/23/2018-10-23-what-is-to-be-rational/</guid>
+      <description>This afternoon I was reading a book about rationality in voting behavior called “An economic theory of political action in a democracy”(Downs 1957). An amazing work (so far), for sure I do not discard that it’s likely I’ve a biased position regarding the application and precision of rational models in economics. However, what impressed me was authors’ self-awareness of the underlying flaws behind rational analysis in decision making, and not covering them like they do not exist in a book from 1957!</description>
+    </item>
+    
+    <item>
+      <title>Presión y grupos de interés</title>
+      <link>/2018/09/19/2018-09-19-presi%C3%B3n-y-grupos-de-inter%C3%A9s/</link>
+      <pubDate>Wed, 19 Sep 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/09/19/2018-09-19-presi%C3%B3n-y-grupos-de-inter%C3%A9s/</guid>
+      <description>Receta para que me concedan beneficios como grupo de interés
+Extraer información que respalde una posición Llevar ésta información al público Realizar actividades disruptivas para forzar a los tomadores de decisiones a seguir sus peticiones La prensa basa su negocio en la venta de publicidad  </description>
+    </item>
+    
+    <item>
+      <title>Defender el status quo</title>
+      <link>/2018/09/14/2018-09-14-defender-el-status-quo/</link>
+      <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/09/14/2018-09-14-defender-el-status-quo/</guid>
+      <description>Desde hace algunos meses atrás veo la vida con otros lentes, y que me asombra que después de estudiar una carrera de economía no lo viese igual. Primero, a observar un algún evento (e) y su desenlace (d), tiendo a pensar en escenarios alternativos, es decir, qué hubiera pasado en d si e no hubiese ocurrido.1. Segundo, más allá de la utilidad e incentivos de las personas, y más en sus actitudes y capacidad para tomar decisiones en situaciones de incertimbre cuando su capacidad para computar información es imperfecta (básicamente el concepto de racionalidad limitada).</description>
+    </item>
     
     <item>
       <title>How to cope with the media bias in the news market?</title>

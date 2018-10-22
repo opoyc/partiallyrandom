@@ -9,10 +9,19 @@
     <managingEditor>opoyserc@gmail.com (Obryan Poyser)</managingEditor>
     <webMaster>opoyserc@gmail.com (Obryan Poyser)</webMaster>
     <copyright>(c) 2018 Copyright Partially Random</copyright>
-    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/decision-making/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is to be econo-rational?</title>
+      <link>/2018/10/23/2018-10-23-what-is-to-be-rational/</link>
+      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+      <author>opoyserc@gmail.com (Obryan Poyser)</author>
+      <guid>/2018/10/23/2018-10-23-what-is-to-be-rational/</guid>
+      <description>This afternoon I was reading a book about rationality in voting behavior called “An economic theory of political action in a democracy”(Downs 1957). An amazing work (so far), for sure I do not discard that it’s likely I’ve a biased position regarding the application and precision of rational models in economics. However, what impressed me was authors’ self-awareness of the underlying flaws behind rational analysis in decision making, and not covering them like they do not exist in a book from 1957!</description>
+    </item>
     
     <item>
       <title>How to cope with the media bias in the news market?</title>

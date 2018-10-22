@@ -6,7 +6,7 @@ categories:
     - Opinion
 tags:
     - Education
-bibliography: ddp.bib
+bibliography: "references_blog.bib"
 thumbnail: "/img/g1.png"
 lang: "español"
 ---

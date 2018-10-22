@@ -1,0 +1,34 @@
+---
+title: Defender el status quo
+author: Obryan Poyser
+date: '2018-09-14'
+slug: defender-el-status-quo
+categories:
+  - Economics
+tags:
+  - reforma fiscal
+  - huelga
+  - sindicatos
+type: post
+description: ""
+lang:
+  - español
+---
+
+Desde hace algunos meses atrás veo la vida con otros lentes, y que me asombra que después de estudiar una carrera de economía no lo viese igual. Primero, a observar un algún evento (e) y su desenlace (d), tiendo a pensar en escenarios alternativos, es decir, qué hubiera pasado en *d* si *e* no hubiese ocurrido.^[Le echo la culpa a el último libro de Judea Pearl, [*"The Book of Why"*](https://www.amazon.es/gp/product/B075DCKP7V?ref=dbs_p2d_P_R_popup_yes_alc_T2), que cuando termine espero hacer una reseña acá.]. Segundo, más allá de la utilidad e incentivos de las personas, y más en sus actitudes y capacidad para tomar decisiones en situaciones de incertimbre cuando su capacidad para computar información es imperfecta (básicamente el concepto de racionalidad limitada).
+
+Facebook es para mí algo como una caja de pandora, todos los males de mi país se escapan en una escena que en mi cabeza se ven como los dementores de Harry Potter. El tema *hot* de ésta semana es la **reforma fiscal**, la huelga e incidentes asociados, cualquiera con medio minuto de curiosidad puede darse cuenta. Francamente no voy a hablar de ella en su sentido técnico, no es mi área y el aporte sería mínimo. Lo que sí me interesa hablar paja es sobre se están dando la serie de eventos. 
+
+```{r, fig.align='center', echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/RGSg99PXWzKN2/giphy.gif")
+```
+
+Desde el Gobierno de Laura Chinchilla se ha estado insistiendo en que las finanzas públicas están en un estado crítico. Pienso que el hecho de que el actual proyecto esté en una fase muy avanzada para su aprobación es un logro brutal. Lo que no me cabe es que el movimiento sindical haya esperado hasta el minuto 86 para decirle al profe que lo meta a la cancha, o de lo contrario apaga las luces y la mejenga se cancela.
+
+A propósito de éste hecho, hoy leí un [artículo](https://delfino.cr/2018/09/fake-news-fiscales/) interesante donde desmiente aparente desinformación que se está distribuyendo por y entre aquellos que apoyan la huelga. Y me plantee hacer hipótesis sobre qué está guiando sus acciones como individuos y como masa, no es ciencia de cohetes, pero considero que vale la pena comentarlo:
+
+1. Creen que la información es cierta, y que huelga es justificada porque afecta la clase trabajadora
+1. Creen que la información es cierta, y que huelga es justificada porque afecta al empleado público
+1. Creen que la información es cierta, y que huelga es justificada porque afecta su bienestar económico personal/familia
+1. No creen que la información es cierta, pero es buena medida de presión para que 
+
