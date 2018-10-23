@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <title>Creating a dummy variable: the Tidy way  &middot; Partially Random</title>
+  <title>Creating a binary discrete variable: the Tidy way  &middot; Partially Random</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
@@ -14,10 +14,10 @@
 
 <meta name="description" content="" />
 
-<meta name="keywords" content="factor variable, dummy variable, ">
+<meta name="keywords" content="factor variable, ">
 
 
-<meta property="og:title" content="Creating a dummy variable: the Tidy way  &middot; Partially Random ">
+<meta property="og:title" content="Creating a binary discrete variable: the Tidy way  &middot; Partially Random ">
 <meta property="og:site_name" content="Partially Random"/>
 <meta property="og:url" content="/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/" />
 <meta property="og:locale" content="en">
@@ -32,15 +32,13 @@
     
 <meta property="og:article:tag" content="factor variable">
     
-<meta property="og:article:tag" content="dummy variable">
-    
   
 
   
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@opoyc" />
 <meta name="twitter:creator" content="@opoyc" />
-<meta name="twitter:title" content="Creating a dummy variable: the Tidy way" />
+<meta name="twitter:title" content="Creating a binary discrete variable: the Tidy way" />
 <meta name="twitter:description" content="" />
 <meta name="twitter:url" content="/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/" />
 <meta name="twitter:domain" content="/">
@@ -51,7 +49,7 @@
   {
     "@context": "http://schema.org",
     "@type": "Article",
-    "headline": "Creating a dummy variable: the Tidy way",
+    "headline": "Creating a binary discrete variable: the Tidy way",
     "author": {
       "@type": "Person",
       "name": "http://profiles.google.com/+?rel=author"
@@ -179,7 +177,7 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <div class="title-metas text-center">
 
-    <h1>Creating a dummy variable: the Tidy way
+    <h1>Creating a binary discrete variable: the Tidy way
 </h1>
 
     <div class="metas">
@@ -199,7 +197,7 @@
     <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
 
-    <a href="https://twitter.com/intent/tweet?text=Creating%20a%20dummy%20variable%3a%20the%20Tidy%20way&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
+    <a href="https://twitter.com/intent/tweet?text=Creating%20a%20binary%20discrete%20variable%3a%20the%20Tidy%20way&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
 
     <a href="https://plus.google.com/share?url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
@@ -208,10 +206,10 @@
     <a href="http://www.reddit.com/submit?url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
 
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f&amp;title=Creating%20a%20dummy%20variable%3a%20the%20Tidy%20way" onclick="window.open(this.href, 'mywin',
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f&amp;title=Creating%20a%20binary%20discrete%20variable%3a%20the%20Tidy%20way" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
 
-    <a href="mailto:?subject=Creating%20a%20dummy%20variable%3a%20the%20Tidy%20way&amp;body=Check out this site %2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+    <a href="mailto:?subject=Creating%20a%20binary%20discrete%20variable%3a%20the%20Tidy%20way&amp;body=Check out this site %2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
   </span>
 
   </small>
@@ -220,8 +218,6 @@
   <i class="fa fa-tags"></i>
   
   <a href="/tags/factor-variable" class="label label-primary">factor variable</a>
-  
-  <a href="/tags/dummy-variable" class="label label-primary">dummy variable</a>
   
 
 
@@ -600,7 +596,7 @@ tertiary
     <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
 
-    <a href="https://twitter.com/intent/tweet?text=Creating%20a%20dummy%20variable%3a%20the%20Tidy%20way&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
+    <a href="https://twitter.com/intent/tweet?text=Creating%20a%20binary%20discrete%20variable%3a%20the%20Tidy%20way&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
 
     <a href="https://plus.google.com/share?url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
@@ -609,10 +605,10 @@ tertiary
     <a href="http://www.reddit.com/submit?url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
 
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f&amp;title=Creating%20a%20dummy%20variable%3a%20the%20Tidy%20way" onclick="window.open(this.href, 'mywin',
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f&amp;title=Creating%20a%20binary%20discrete%20variable%3a%20the%20Tidy%20way" onclick="window.open(this.href, 'mywin',
 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
 
-    <a href="mailto:?subject=Creating%20a%20dummy%20variable%3a%20the%20Tidy%20way&amp;body=Check out this site %2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+    <a href="mailto:?subject=Creating%20a%20binary%20discrete%20variable%3a%20the%20Tidy%20way&amp;body=Check out this site %2f2018%2f07%2f26%2f2018-07-26-creating-a-dummy-variable-the-tidy-way%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
   </span>
 
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -682,7 +678,7 @@ tertiary
           </li>
         
           <li>
-          <a href="/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/">Creating a dummy variable: the Tidy way</a>
+          <a href="/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/">Creating a binary discrete variable: the Tidy way</a>
           </li>
         
           <li>
@@ -751,7 +747,7 @@ tertiary
 
         <div class="content">
           <ul>
-            <li><a href="/tags/decision-making">decision-making</a></li><li><a href="/tags/bayesian-thinking">bayesian-thinking</a></li><li><a href="/tags/web-scraping">web-scraping</a></li><li><a href="/tags/comunicaci%C3%B3n">comunicación</a></li><li><a href="/tags/costa-rica">costa-rica</a></li><li><a href="/tags/dummy-variable">dummy-variable</a></li><li><a href="/tags/education">education</a></li><li><a href="/tags/factor-variable">factor-variable</a></li><li><a href="/tags/instagram">instagram</a></li><li><a href="/tags/journal-articles">journal-articles</a></li>
+            <li><a href="/tags/decision-making">decision-making</a></li><li><a href="/tags/bayesian-thinking">bayesian-thinking</a></li><li><a href="/tags/web-scraping">web-scraping</a></li><li><a href="/tags/comunicaci%C3%B3n">comunicación</a></li><li><a href="/tags/costa-rica">costa-rica</a></li><li><a href="/tags/education">education</a></li><li><a href="/tags/factor-variable">factor-variable</a></li><li><a href="/tags/instagram">instagram</a></li><li><a href="/tags/journal-articles">journal-articles</a></li><li><a href="/tags/lenguaje">lenguaje</a></li>
           </ul>
         </div>
       </div>
