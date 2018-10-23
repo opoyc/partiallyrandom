@@ -1,8 +1,8 @@
 ---
-title: What is to be econo-rational?
+title: What is to be rational?
 author: Obryan Poyser
 date: '2018-10-23'
-slug: what-is-to-be-econo-rational
+slug: what-is-to-be-rational
 categories:
   - Economics
 tags:
