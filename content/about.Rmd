@@ -5,6 +5,12 @@ slug: about
 
 Hi!
 
+```{r, echo=FALSE, fig.pos="H", fig.align='center', message=FALSE}
+knitr::include_graphics("/img/me.png")
+```
+
+
+
 My name is Obryan Poyser, I am a predoctoral researcher in the Applied Economics program at *Universitat Autònoma de Barcelona*. Partially random is sorta like my bridge to systematize my thoughts, doubts, and concerns. In this blog, you will find posts regarding my interest such as:
 
 - R Language
