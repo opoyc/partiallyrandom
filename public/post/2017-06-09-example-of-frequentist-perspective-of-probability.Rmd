@@ -6,9 +6,7 @@ slug: example-of-frequentist-perspective-of-probability
 categories:
   - Statistics
 tags:
-  - R
-  - Probability
-  - Flip coin
+  - probability
 lang:
   - english
 ---

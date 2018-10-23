@@ -6,8 +6,8 @@ slug: incertidumbre-y-otros-cuentos-entre-los-alvarados-cuál-es-mejor-apuesta
 categories:
   - Opinion
 tags:
-  - Decision-making
-  - Bayesian
+  - decision-making
+  - bayesian-thinking
 description: ''
 thumbnail: 'img/apuesta1.jpg'
 lang: "español"
