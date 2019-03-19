@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Visual selection of optimal lag length in VAR models  &middot; Partially Random</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="VAR, ">
+
+
+<meta property="og:title" content="Visual selection of optimal lag length in VAR models  &middot; Partially Random ">
+<meta property="og:site_name" content="Partially Random"/>
+<meta property="og:url" content="/2019/03/19/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models/" />
+<meta property="og:locale" content="en">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content=""/>
+<meta property="og:article:published_time" content="2019-03-19T00:00:00Z" />
+<meta property="og:article:modified_time" content="2019-03-19T00:00:00Z" />
+
+  
+    
+<meta property="og:article:tag" content="VAR">
+    
+  
+
+  
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@opoyc" />
+<meta name="twitter:creator" content="@opoyc" />
+<meta name="twitter:title" content="Visual selection of optimal lag length in VAR models" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="/2019/03/19/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models/" />
+<meta name="twitter:domain" content="/">
+  
+
+  
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "headline": "Visual selection of optimal lag length in VAR models",
+    "author": {
+      "@type": "Person",
+      "name": "http://profiles.google.com/+?rel=author"
+    },
+    "datePublished": "2019-03-19",
+    "description": "",
+    "wordCount": 537
+  }
+</script>
+  
+
+
+
+<link rel="canonical" href="/2019/03/19/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models/" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
+<link rel="icon" href="/favicon.png">
+<meta name="generator" content="Hugo 0.54.0" />
+
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+    <link rel="stylesheet" href="/css/bootswatch/paper/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css">
+
+
+<link rel="stylesheet" href="/css/style_custom.css">
+
+
+
+  <link rel="stylesheet" href="/css/highlight/xcode.css">
+
+
+</head>
+<body data-ng-app="myapp" data-ng-controller="MyController" data-ng-mouseleave="MouseLeave($event)">
+    <header id="main-header">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <a class="navbar-brand" href="/">
+          Partially Random
+          
+          
+          </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            
+            
+            <li class="">
+              
+                <a href="/about/" >
+                  
+                  About me
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="https://opoyc.github.io/" >
+                  <i class='fa fa-globe'></i>
+                  Website
+                </a>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Social/Contact <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    
+                      <li class="">
+                        <a href="mailto:opoyserc@gmail.com"><i class='fa fa-envelope'></i> Email</a>
+                      </li>
+                    
+                      <li class="">
+                        <a href="https://github.com/opoyc"><i class='fa fa-github'></i> Github</a>
+                      </li>
+                    
+                  </ul>
+              
+            </li>
+            
+            <li class="">
+              
+                <a href="/tags/" >
+                  
+                  Tags
+                </a>
+              
+            </li>
+            
+            
+              
+          </ul>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9">
+
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="title-metas text-center">
+
+    <h1>Visual selection of optimal lag length in VAR models
+</h1>
+
+    <div class="metas">
+<small>
+  <i class="fa fa-calendar"></i>
+  <time datetime="2019-03-19">19 Mar, 2019</time>
+</small>
+
+
+  <small>
+    &middot; by Obryan Poyser
+  
+  &middot; Read in about 3 min
+  &middot; (537 words)
+  &middot; 
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=Visual%20selection%20of%20optimal%20lag%20length%20in%20VAR%20models&amp;url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f&amp;title=Visual%20selection%20of%20optimal%20lag%20length%20in%20VAR%20models" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=Visual%20selection%20of%20optimal%20lag%20length%20in%20VAR%20models&amp;body=Check out this site %2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  </small>
+
+<div class="margin-10">
+  <i class="fa fa-tags"></i>
+  
+  <a href="/tags/var" class="label label-primary">VAR</a>
+  
+
+
+</div>
+
+<br>
+</div>
+
+  </div>
+</div>
+
+
+      <div class="content">
+  
+
+
+<p>Recently, I have been playing with vector autoregressive models. During the model specification and “sanity checks” one has to choose model order, that is, how many LHS lags introduce in the multi-equation model.</p>
+<p>The most common approach for lag order selection is to inspect among different information criteria and choose the model that minimizes these indicators. There are several Information Criterion alternatives, and they vary on the weight they put on prediction error and parameters. For instance, Schwarz-Bayes (SC or BIC) over penalized big models (several estimated parameters) in comparison to Akaike (AIC). Therefore, there is always on researchers’ hand to choose the order according to the different IC options. But there is little “issue”, different IC, have unequal units, therefore, they are not directly comparable, this is actually not a huge deal, but I just find out it is a good idea to normalize the outputs for each lag order as a way to have comparable units.</p>
+<p><span class="math display">\[
+IC_{i}^{norm}=\frac{IC_i-min(IC_i)}{max(IC_i)-min(IC_i)}
+\]</span></p>
+<p>Using <code>VARselect</code> function from the <code>vars</code> package brings the following output</p>
+<pre class="r"><code>vars::VARselect(data)$criteria</code></pre>
+<pre><code>##                 1          2          3          4          5          6
+## AIC(n) -0.3890208 -0.6033652 -0.7052740 -0.7619655 -0.7955089 -0.8474857
+## HQ(n)  -0.3496596 -0.5312029 -0.6003106 -0.6242011 -0.6249434 -0.6441191
+## SC(n)  -0.2833281 -0.4095953 -0.4234268 -0.3920411 -0.3375073 -0.3014068
+## FPE(n)  0.6777203  0.5469686  0.4939752  0.4667523  0.4513592  0.4285033
+##                 7          8           9           10
+## AIC(n) -0.8643857 -0.8792435 -0.89673697 -0.903090028
+## HQ(n)  -0.6282181 -0.6102748 -0.59496726 -0.568519262
+## SC(n)  -0.2302296 -0.1570102 -0.08642642 -0.004702242
+## FPE(n)  0.4213293  0.4151245  0.40793694  0.405367380</code></pre>
+<p>Then again, it is not a big deal searching through the columns and finding the minimum rowwise. For STATA users this is more intuitive, since it is organized columnwise like:</p>
+<pre class="r"><code>vars::VARselect(data)$criteria %&gt;% t()</code></pre>
+<pre><code>##        AIC(n)      HQ(n)        SC(n)    FPE(n)
+## 1  -0.3890208 -0.3496596 -0.283328144 0.6777203
+## 2  -0.6033652 -0.5312029 -0.409595283 0.5469686
+## 3  -0.7052740 -0.6003106 -0.423426803 0.4939752
+## 4  -0.7619655 -0.6242011 -0.392041105 0.4667523
+## 5  -0.7955089 -0.6249434 -0.337507304 0.4513592
+## 6  -0.8474857 -0.6441191 -0.301406823 0.4285033
+## 7  -0.8643857 -0.6282181 -0.230229573 0.4213293
+## 8  -0.8792435 -0.6102748 -0.157010158 0.4151245
+## 9  -0.8967370 -0.5949673 -0.086426420 0.4079369
+## 10 -0.9030900 -0.5685193 -0.004702242 0.4053674</code></pre>
+<p>But in the end, they lack an easier comparable point, then, why not normalizing them? First, let’s create a simple function for normalized data:</p>
+<pre class="r"><code>normF &lt;- function(x){
+    (x-min(x, na.rm = T))/(max(x, na.rm = T)-min(x, na.rm = T))
+}</code></pre>
+<p>Then, start from a over-amplified (high frequency data has its pros) selection of orders, and some “tidying” we can create the following graph:</p>
+<pre class="r"><code>VARselect(data, lag.max = 40, type = &quot;both&quot;)$criteria %&gt;% 
+    t() %&gt;% 
+    as_tibble() %&gt;% 
+    tibble::rownames_to_column(var = &quot;lag&quot;) %&gt;% 
+    set_names(nm = c(&quot;lag&quot;, &quot;AIC&quot;, &quot;HQ&quot;, &quot;SC&quot;, &quot;FPE&quot;)) %&gt;% 
+    mutate_at(.vars = vars(-lag), ~normF(.)) %&gt;% 
+    mutate(lag=as.numeric(lag)) %&gt;% 
+    gather(key = &quot;IC&quot;, value = &quot;value&quot;, -lag) %&gt;% 
+    group_by(IC) %&gt;% 
+    mutate(diff=tsibble::difference(value)) %&gt;% 
+    gather(key = &quot;key&quot;, value = &quot;value&quot;, -lag, -IC) %&gt;% 
+    ggplot(aes(lag, value, col=IC))+
+    geom_line() +
+    facet_wrap(~key, ncol = 1, scales = &quot;free&quot;)</code></pre>
+<p><img src="/post/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models.en_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>From the graph below we can easily conclude that indeed, Schwarz-Bayes Criterion (SC) penalized big models, same as Hannan-Quinn Criterion, being 2 and 6 lags respectively, whereas Akaike IC and Akaike’s Final Prediction Error Criterion (FPE) coincide in 10 lags.</p>
+<p>Another way to help in the decision is to select the number of lags in which the sequential difference stabilizes. Which actually happens around 8 lags, which could be a more parsimonious model.</p>
+
+</div>
+
+
+      <footer>
+  
+<span class="share-box">Share this on:
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-facebook-official "></i></a>
+
+    <a href="https://twitter.com/intent/tweet?text=Visual%20selection%20of%20optimal%20lag%20length%20in%20VAR%20models&amp;url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-twitter"></i></a>
+
+    <a href="https://plus.google.com/share?url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-google-plus"></i></a>
+
+    <a href="http://www.reddit.com/submit?url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-reddit"></i></a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f&amp;title=Visual%20selection%20of%20optimal%20lag%20length%20in%20VAR%20models" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><i class="fa fa-linkedin"></i></a>
+
+    <a href="mailto:?subject=Visual%20selection%20of%20optimal%20lag%20length%20in%20VAR%20models&amp;body=Check out this site %2f2019%2f03%2f19%2f2019-03-19-visual-selection-of-optimal-lag-length-in-var-models%2f" data-proofer-ignore=""><i class="fa fa-envelope"></i></a>
+  </span>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      
+  
+    <nav><ul class="pager">
+    
+        <li class="previous">
+          <a href="/2018/10/23/2018-10-23-what-is-to-be-rational/" title="What is to be rational?">
+            <span aria-hidden="true">&larr;</span>Previous
+          </a>
+        </li>
+    
+
+    
+    </ul> </nav>
+  
+
+
+</div>
+
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function() {
+    
+    
+    if (window.location.hostname == "localhost")
+      return;
+
+    var dsq = document.createElement('script'); dsq.async = true; dsq.type = 'text/javascript';
+    dsq.src = '//partiallyrandom-1.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+</footer>
+
+    </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div>
+  
+
+    <div class="section">
+      <header><div class="title"><b>Latest Posts</b></div></header>
+      <div class="content">
+        <ul>
+        
+          <li>
+          <a href="/2019/03/19/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models/">Visual selection of optimal lag length in VAR models</a>
+          </li>
+        
+          <li>
+          <a href="/2018/10/23/2018-10-23-what-is-to-be-rational/">What is to be rational?</a>
+          </li>
+        
+          <li>
+          <a href="/2018/09/04/2018-09-04-should-we-demand-mess-media-bias-or-diverge-our-information-sources/">How to cope with the media bias in the news market?</a>
+          </li>
+        
+          <li>
+          <a href="/2018/07/26/2018-07-26-creating-a-dummy-variable-the-tidy-way/">Creating a binary discrete variable: the Tidy way</a>
+          </li>
+        
+          <li>
+          <a href="/2018/07/19/2018-07-19-digame-costariquenyo-por-favor/">Dígame Costarriqueño por favor</a>
+          </li>
+        
+          <li>
+          <a href="/2018/06/07/2018-06-07-collect-followers-on-instagram/">World Cup players&#39; hype on Instagram</a>
+          </li>
+        
+          <li>
+          <a href="/2018/05/28/2018-05-28-getting-science-direct-articles/">Getting research titles from science direct</a>
+          </li>
+        
+          <li>
+          <a href="/2018/03/25/2018-03-25-incertidumbre-y-otros-cuentos-entre-los-alvarados-cu%C3%A1l-es-mejor-apuesta/">Incertidumbre y otros cuentos: Entre los Alvarados ¿cuál es mejor apuesta?</a>
+          </li>
+        
+          <li>
+          <a href="/2018/02/23/2018-02-23-bayes-y-el-cajero-autom%C3%A1tico/">Bayes y el cajero automático</a>
+          </li>
+        
+          <li>
+          <a href="/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/">¡Necesitamos seleccionar los docentes &#34;como para ayer&#34;!</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>category</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/categories/personal">personal</a></li><li><a href="/categories/r-language">r-language</a></li><li><a href="/categories/economics">economics</a></li><li><a href="/categories/opinion">opinion</a></li><li><a href="/categories/statistics">statistics</a></li><li><a href="/categories/time-series">time-series</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>lang</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/lang/espa%C3%B1ol">español</a></li><li><a href="/lang/english">english</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+      
+      
+      <div class="section taxonomies">
+        <header><div class="title"><b>tag</b></div></header>
+
+        <div class="content">
+          <ul>
+            <li><a href="/tags/decision-making">decision-making</a></li><li><a href="/tags/bayesian-thinking">bayesian-thinking</a></li><li><a href="/tags/web-scraping">web-scraping</a></li><li><a href="/tags/comunicaci%C3%B3n">comunicación</a></li><li><a href="/tags/costa-rica">costa-rica</a></li><li><a href="/tags/education">education</a></li><li><a href="/tags/factor-variable">factor-variable</a></li><li><a href="/tags/instagram">instagram</a></li><li><a href="/tags/journal-articles">journal-articles</a></li><li><a href="/tags/lenguaje">lenguaje</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    
+
+</div>
+
+      </div>
+    
+  </div>
+</div>
+    
+<footer class="footer hidden-print">
+  <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+           <div class="pull-left">
+  <a class="toplink" href="javascript:" id="return-to-top">back to top</a>
+</div>
+<div class="pull-right">
+
+<a href="/disclaimer/">Disclaimer</a> <i>&middot;</i>
+
+<a href="/terms/">Terms</a> 
+
+</div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+              
+    
+<div class="container footline">
+    <small>
+  Partially Random by Obryan Poyser | Theme: <a href="https://github.com/appernetic">appernetic</a>
+
+</small>
+</div>
+
+
+    
+<div class="container copyright">
+    <small>
+  &copy; 2018 Copyright Partially Random
+
+  </small>
+</div>
+
+
+
+        </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+<script src="/js/site.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  var _gaq=[['_setAccount','UA-97643146-4'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+var ENABLE_POPOVER =  false , 
+EXPIRE_COOKIE =  5 , 
+SHOW_MODAL_TIMEOUT =  10000 , 
+MOUSE_LEAVE =  true , 
+MODAL_SIZE = "", 
+POST_URL = "https://zapier.com/hooks/catch/1227563/", 
+SIGNUP_HEADER = "Join Our Newsletter",
+HEADER_IMAGE = "//placehold.it/1000x600",
+IMG_DESCRIPTION = "Placeholder image for this popover modal optin form",
+SIGNUP_TEXT = "Signup today for free and be the first to get notified on new updates.",
+INPUT_PLACEHOLDER = "Enter your email",
+SUBMIT_BUTTON = "Subscribe",
+SUCCESS_MESSAGE = "Thanks for your subscription!",
+ERROR_MESSAGE = "Submitting form failed!",
+OPTIN =  true ,
+COOKIE_NAME = "mycookie1",
+CONTENTLANGUAGE =  null ; 
+</script>
+
+
+
+
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/config/TeX-AMS-MML_HTMLorMML.js"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    for(var all in MathJax.Hub.getAllJax()) {
+        all.SourceElement().parentNode.className += ' has-jax';
+
+    }
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+

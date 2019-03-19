@@ -1,0 +1,66 @@
+---
+title: Visual selection of optimal lag length in VAR models
+author: Obryan Poyser
+date: '2019-03-19'
+slug: visual-selection-of-optimal-lag-length-in-var-models
+categories:
+  - Time series
+tags:
+  - VAR
+type: post
+---
+
+
+
+<p>Recently, I have been playing with vector autoregressive models. During the model specification and “sanity checks” one has to choose model order, that is, how many LHS lags introduce in the multi-equation model.</p>
+<p>The most common approach for lag order selection is to inspect among different information criteria and choose the model that minimizes these indicators. There are several Information Criterion alternatives, and they vary on the weight they put on prediction error and parameters. For instance, Schwarz-Bayes (SC or BIC) over penalized big models (several estimated parameters) in comparison to Akaike (AIC). Therefore, there is always on researchers’ hand to choose the order according to the different IC options. But there is little “issue”, different IC, have unequal units, therefore, they are not directly comparable, this is actually not a huge deal, but I just find out it is a good idea to normalize the outputs for each lag order as a way to have comparable units.</p>
+<p><span class="math display">\[
+IC_{i}^{norm}=\frac{IC_i-min(IC_i)}{max(IC_i)-min(IC_i)}
+\]</span></p>
+<p>Using <code>VARselect</code> function from the <code>vars</code> package brings the following output</p>
+<pre class="r"><code>vars::VARselect(data)$criteria</code></pre>
+<pre><code>##                 1          2          3          4          5          6
+## AIC(n) -0.3890208 -0.6033652 -0.7052740 -0.7619655 -0.7955089 -0.8474857
+## HQ(n)  -0.3496596 -0.5312029 -0.6003106 -0.6242011 -0.6249434 -0.6441191
+## SC(n)  -0.2833281 -0.4095953 -0.4234268 -0.3920411 -0.3375073 -0.3014068
+## FPE(n)  0.6777203  0.5469686  0.4939752  0.4667523  0.4513592  0.4285033
+##                 7          8           9           10
+## AIC(n) -0.8643857 -0.8792435 -0.89673697 -0.903090028
+## HQ(n)  -0.6282181 -0.6102748 -0.59496726 -0.568519262
+## SC(n)  -0.2302296 -0.1570102 -0.08642642 -0.004702242
+## FPE(n)  0.4213293  0.4151245  0.40793694  0.405367380</code></pre>
+<p>Then again, it is not a big deal searching through the columns and finding the minimum rowwise. For STATA users this is more intuitive, since it is organized columnwise like:</p>
+<pre class="r"><code>vars::VARselect(data)$criteria %&gt;% t()</code></pre>
+<pre><code>##        AIC(n)      HQ(n)        SC(n)    FPE(n)
+## 1  -0.3890208 -0.3496596 -0.283328144 0.6777203
+## 2  -0.6033652 -0.5312029 -0.409595283 0.5469686
+## 3  -0.7052740 -0.6003106 -0.423426803 0.4939752
+## 4  -0.7619655 -0.6242011 -0.392041105 0.4667523
+## 5  -0.7955089 -0.6249434 -0.337507304 0.4513592
+## 6  -0.8474857 -0.6441191 -0.301406823 0.4285033
+## 7  -0.8643857 -0.6282181 -0.230229573 0.4213293
+## 8  -0.8792435 -0.6102748 -0.157010158 0.4151245
+## 9  -0.8967370 -0.5949673 -0.086426420 0.4079369
+## 10 -0.9030900 -0.5685193 -0.004702242 0.4053674</code></pre>
+<p>But in the end, they lack an easier comparable point, then, why not normalizing them? First, let’s create a simple function for normalized data:</p>
+<pre class="r"><code>normF &lt;- function(x){
+    (x-min(x, na.rm = T))/(max(x, na.rm = T)-min(x, na.rm = T))
+}</code></pre>
+<p>Then, start from a over-amplified (high frequency data has its pros) selection of orders, and some “tidying” we can create the following graph:</p>
+<pre class="r"><code>VARselect(data, lag.max = 40, type = &quot;both&quot;)$criteria %&gt;% 
+    t() %&gt;% 
+    as_tibble() %&gt;% 
+    tibble::rownames_to_column(var = &quot;lag&quot;) %&gt;% 
+    set_names(nm = c(&quot;lag&quot;, &quot;AIC&quot;, &quot;HQ&quot;, &quot;SC&quot;, &quot;FPE&quot;)) %&gt;% 
+    mutate_at(.vars = vars(-lag), ~normF(.)) %&gt;% 
+    mutate(lag=as.numeric(lag)) %&gt;% 
+    gather(key = &quot;IC&quot;, value = &quot;value&quot;, -lag) %&gt;% 
+    group_by(IC) %&gt;% 
+    mutate(diff=tsibble::difference(value)) %&gt;% 
+    gather(key = &quot;key&quot;, value = &quot;value&quot;, -lag, -IC) %&gt;% 
+    ggplot(aes(lag, value, col=IC))+
+    geom_line() +
+    facet_wrap(~key, ncol = 1, scales = &quot;free&quot;)</code></pre>
+<p><img src="/post/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models.en_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>From the graph below we can easily conclude that indeed, Schwarz-Bayes Criterion (SC) penalized big models, same as Hannan-Quinn Criterion, being 2 and 6 lags respectively, whereas Akaike IC and Akaike’s Final Prediction Error Criterion (FPE) coincide in 10 lags.</p>
+<p>Another way to help in the decision is to select the number of lags in which the sequential difference stabilizes. Which actually happens around 8 lags, which could be a more parsimonious model.</p>

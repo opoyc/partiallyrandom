@@ -68,7 +68,7 @@
 <link rel="canonical" href="/2017/04/26/2017-04-26-save-with-time-stamp/" />
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-144-precomposed.png">
 <link rel="icon" href="/favicon.png">
-<meta name="generator" content="Hugo 0.40.2" />
+<meta name="generator" content="Hugo 0.54.0" />
 
   <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
@@ -235,7 +235,10 @@
 
 
       <div class="content">
-  <p>Oftenly I have to deal with modifications of a scraping code, whose outcomes change or are subject to errors. Hence, I found useful to have a way to create versions of a data frame, this is a made <code>savts</code>.</p>
+  
+
+
+<p>Oftenly I have to deal with modifications of a scraping code, whose outcomes change or are subject to errors. Hence, I found useful to have a way to create versions of a data frame, this is a made <code>savts</code>.</p>
 <p>This simple yet useful function creates csv file with time stamp. It saves a data frame in the working directory as a csv file, separated by semicolon with a date and system time (format <code>%d%m%y_%H%M</code>).</p>
 <pre><code>savts = function(x) {
   write.csv2(x, paste(getwd(), &quot;/&quot;, deparse(substitute(x)), &quot;-&quot;, format(Sys.time(),
@@ -325,6 +328,10 @@
         <ul>
         
           <li>
+          <a href="/2019/03/19/2019-03-19-visual-selection-of-optimal-lag-length-in-var-models/">Visual selection of optimal lag length in VAR models</a>
+          </li>
+        
+          <li>
           <a href="/2018/10/23/2018-10-23-what-is-to-be-rational/">What is to be rational?</a>
           </li>
         
@@ -360,10 +367,6 @@
           <a href="/2017/08/23/2017-08-23-necesitamos-mejorar-la-educaci%C3%B3n-secundaria-para-ayer/">¡Necesitamos seleccionar los docentes &#34;como para ayer&#34;!</a>
           </li>
         
-          <li>
-          <a href="/2017/07/17/2017-07-17-esas-canciones-que-quiebran-y-reparan/">Esas canciones que quiebran y reparan</a>
-          </li>
-        
         </ul>
       </div>
     </div>
@@ -376,7 +379,7 @@
 
         <div class="content">
           <ul>
-            <li><a href="/categories/personal">personal</a></li><li><a href="/categories/r-language">r-language</a></li><li><a href="/categories/economics">economics</a></li><li><a href="/categories/opinion">opinion</a></li><li><a href="/categories/statistics">statistics</a></li>
+            <li><a href="/categories/personal">personal</a></li><li><a href="/categories/r-language">r-language</a></li><li><a href="/categories/economics">economics</a></li><li><a href="/categories/opinion">opinion</a></li><li><a href="/categories/statistics">statistics</a></li><li><a href="/categories/time-series">time-series</a></li>
           </ul>
         </div>
       </div>
@@ -493,7 +496,7 @@ SUCCESS_MESSAGE = "Thanks for your subscription!",
 ERROR_MESSAGE = "Submitting form failed!",
 OPTIN =  true ,
 COOKIE_NAME = "mycookie1",
-CONTENTLANGUAGE = ""; 
+CONTENTLANGUAGE =  null ; 
 </script>
 
 
