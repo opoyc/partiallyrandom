@@ -11,10 +11,6 @@ My name is Obryan Poyser, I am a predoctoral researcher in the Applied Economics
 - Econometrics
 - Behavioral Economics
 - Machine Learning
-- Big Data
-- Economics of the Internet
-- Public Policy
-- Random topics
 
 ```{r, echo=FALSE, fig.pos="H", fig.align='center', message=FALSE, out.width="50%"}
 knitr::include_graphics("/img/me.png")
