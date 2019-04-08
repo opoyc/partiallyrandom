@@ -86,7 +86,7 @@ iframe {
 }
 #Email.fieldInvalid {
   border: 1px solid #ff0000;
-}  
+}
 code.has-jax {
   font: inherit;
   font-size: 100%;
@@ -110,3 +110,10 @@ code.has-jax {
 .fa-reddit { color: #ff5700; }
 
 .fa-twitter { color: #4099FF; }
+
+
+.left {
+    height: 300px;
+    padding: 0 20px 20px 0;
+    float: left;
+}
