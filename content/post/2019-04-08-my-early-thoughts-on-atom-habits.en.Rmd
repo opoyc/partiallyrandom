@@ -6,7 +6,6 @@ slug: my-early-thoughts-on-atom-habits
 categories:
   - personal
 tags:
-  - decision-making
   - book review
 type: post
 ---
